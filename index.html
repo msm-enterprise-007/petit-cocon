@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <!-- ==========================================
+         INFORMATIONS DU DOCUMENT
+    =========================================== -->
+
+    <!-- Encodage des caractères -->
+    <meta charset="UTF-8">
+
+    <!-- Adaptation aux écrans mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre SEO -->
+    <title>Petit Cocon - La confiance au cœur de chaque garde</title>
+
+    <!-- Description SEO -->
+    <meta
+        name="description"
+        content="Petit Cocon met en relation les parents avec des baby-sitters vérifiées pour une garde d'enfants simple, sereine et en toute confiance."
+    >
+
+    <!-- Autorisation d'indexation -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/images/favicon.png"
+    >
+
+
+    <!-- ==========================================
+         FONT AWESOME
+    =========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- ==========================================
+         FEUILLES DE STYLE
+    =========================================== -->
+
+    <!-- Variables globales -->
+    <link rel="stylesheet" href="css/variables.css">
+
+    <!-- Styles globaux -->
+    <link rel="stylesheet" href="css/global.css">
+
+    <!-- Styles du Header -->
+    <link rel="stylesheet" href="css/header.css">
+    
+    <!-- Styles du Hero -->
+    <link rel="stylesheet" href="css/hero.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+
+<body>
+
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+
+            <!-- ======================================
+                 LOGO
+            ======================================= -->
+            
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="Petit Cocon - Accueil"
+            >
+            
+                <picture>
+            
+                    <!-- Logo utilisé uniquement sur mobile -->
+                    <source
+                        media="(max-width: 800px)"
+                        srcset="assets/images/logo-mobile.png"
+                    >
+            
+                    <!-- Logo utilisé sur desktop et tablette -->
+                    <img
+                        src="assets/images/logo.png"
+                        alt="Petit Cocon"
+                    >
+            
+                </picture>
+            
+            </a>
+
+
+            <!-- ======================================
+                 NAVIGATION PRINCIPALE
+            ======================================= -->
+
+            <nav
+                class="main-nav"
+                id="main-menu"
+                aria-label="Navigation principale"
+            >
+
+                <ul>
+
+                    <li>
+                        <a
+                            href="index.html"
+                            class="active"
+                            aria-current="page"
+                        >
+                            Accueil
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pages/baby-sitters.html">
+                            Baby-sitters
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pages/comment-ca-marche.html">
+                            Comment ça marche
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pages/contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- ======================================
+                 ACTIONS DESKTOP
+            ======================================= -->
+
+            <div class="header-actions">
+
+                <!-- Connexion -->
+                <a
+                    href="pages/connexion.html"
+                    class="btn-login"
+                >
+
+                    <i
+                        class="fa-regular fa-user"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>Se connecter</span>
+
+                </a>
+
+
+                <!-- Inscription -->
+                <a
+                    href="pages/inscription.html"
+                    class="btn-register"
+                >
+
+                    <i
+                        class="fa-solid fa-user-plus"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>S'inscrire</span>
+
+                </a>
+
+            </div>
+
+
+            <!-- ======================================
+                 BOUTON MENU MOBILE
+            ======================================= -->
+
+            <button
+                type="button"
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Ouvrir le menu"
+                aria-controls="main-menu"
+                aria-expanded="false"
+            >
+
+                <!-- Icône Font Awesome -->
+                <i
+                    class="fa-solid fa-bars"
+                    aria-hidden="true"
+                ></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- ==========================================
+         CONTENU PRINCIPAL
+         Les sections seront ajoutées progressivement.
+    =========================================== -->
+
+    <main>
+        <!-- Hero : fond uniquement pour le moment -->
+        <!-- <section class="hero" aria-label="Présentation de Petit Cocon">
+        </section> -->
+        <section class="hero" aria-labelledby="hero-title">
+
+            <div class="hero-container">
+        
+                <!-- Visuel du Hero -->
+                <div class="hero-visual" aria-hidden="true">
+                    <img
+                        src="assets/images/hero/hero-main.png"
+                        alt=""
+                    >
+                </div>
+        
+                <!-- Contenu -->
+                <div class="hero-content">
+        
+                    <p class="hero-eyebrow">
+                        <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                        <span>La garde d'enfants en toute confiance</span>
+                    </p>
+        
+                    <h1 id="hero-title">
+                        Parce que vos enfants
+                        <br>
+                        méritent ce qu’il y a
+                        <br>
+                        de <span>mieux.</span>
+                    </h1>
+        
+                    <p class="hero-description">
+                        Petit Cocon connecte les parents à des
+                        baby-sitters vérifiées, passionnées et
+                        de confiance pour des gardes sereines
+                        et sécurisées.
+                    </p>
+        
+                    <div class="hero-actions">
+        
+                        <a
+                            href="pages/baby-sitters.html"
+                            class="hero-btn hero-btn-primary"
+                        >
+                            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                            <span>Trouver une baby-sitter</span>
+                        </a>
+        
+                        <a
+                            href="pages/comment-ca-marche.html"
+                            class="hero-btn hero-btn-secondary"
+                        >
+                            <i class="fa-solid fa-person-circle-question" aria-hidden="true"></i>
+                            <span>Comment ça marche</span>
+                        </a>
+        
+                    </div>
+        
+                </div>
+        
+            </div>
+        
+        
+            <!-- Garanties -->
+            <div class="hero-trust">
+        
+                <div class="hero-trust-item">
+                    <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                    <span>
+                        Baby-sitters<br>
+                        vérifiées et évaluées
+                    </span>
+                </div>
+        
+                <div class="hero-trust-item">
+                    <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                    <span>
+                        Données protégées<br>
+                        et confidentialité
+                    </span>
+                </div>
+        
+                <div class="hero-trust-item">
+                    <i class="fa-regular fa-star" aria-hidden="true"></i>
+                    <span>
+                        Réservations simples<br>
+                        et sécurisées
+                    </span>
+                </div>
+        
+            </div>
+        
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         FOOTER
+         Sera réalisé plus tard.
+    =========================================== -->
+
+    <footer>
+
+    </footer>
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <!-- JS global -->
+    <script src="js/main.js" defer></script>
+
+    <!-- JS spécifique au Header -->
+    <script src="js/header.js" defer></script>
+
+</body>
+
+</html>

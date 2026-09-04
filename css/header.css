@@ -1,0 +1,455 @@
+/* ==========================================
+   HEADER — STRUCTURE DESKTOP
+========================================== */
+
+.site-header {
+    position: relative;
+
+    width: 100%;
+
+    background-color: var(--white);
+    /* background-color: #FEF6E3; */ /* : couleur crème à garder et utiliser*/ 
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+}
+
+
+/* ==========================================
+   CONTENEUR DU HEADER
+========================================== */
+
+.header-container {
+    min-height: 96px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+/*
+ * Le logo est une image complète.
+ *
+ * Pour modifier facilement sa taille :
+ *
+ * width: 155px;
+ *
+ * Tu peux tester :
+ * 145px
+ * 150px
+ * 155px
+ * 160px
+ * etc.
+ */
+
+.logo {
+    display: block;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+/* ==========================================
+   LOGO — DESKTOP / TABLETTE
+========================================== */
+
+.logo img {
+    width: 210px;
+    height: auto;
+}
+
+/* ==========================================
+   LOGO — MOBILE
+========================================== */
+
+@media (max-width: 800px) {
+
+    .logo img {
+        width: 260px !important;
+        height: auto;
+    }
+
+}
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.main-nav {
+    margin-left: auto;
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+
+    gap: 38px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+/* Liens de navigation */
+
+.main-nav a {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 96px;
+
+    color: var(--text);
+
+    /*
+     * Épaisseur légèrement renforcée pour
+     * mieux correspondre à la maquette.
+     */
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color var(--transition);
+}
+
+
+/* Survol */
+
+.main-nav a:hover {
+    color: var(--primary);
+}
+
+
+/* Page active */
+
+.main-nav a.active {
+    color: var(--primary);
+}
+
+
+/* Soulignement de la page active */
+
+.main-nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 24px;
+
+    height: 2px;
+
+    border-radius: 999px;
+
+    background-color: var(--primary);
+}
+
+
+/* ==========================================
+   BOUTONS HEADER
+========================================== */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+
+/* Style commun */
+
+.btn-login,
+.btn-register {
+    min-height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 16px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        background-color var(--transition),
+        color var(--transition),
+        border-color var(--transition);
+}
+
+
+/* ------------------------------------------
+   Bouton connexion
+------------------------------------------ */
+
+.btn-login {
+    border: 1px solid var(--primary);
+
+    background-color: var(--white);
+
+    color: var(--text);
+}
+
+.btn-login:hover {
+    background-color: #faf6ef;
+}
+
+
+/* ------------------------------------------
+   Bouton inscription
+------------------------------------------ */
+
+.btn-register {
+    border: 1px solid var(--primary);
+
+    background-color: var(--primary);
+
+    color: var(--white);
+}
+
+.btn-register:hover {
+    background-color: var(--primary-dark);
+
+    border-color: var(--primary-dark);
+}
+
+
+/* ------------------------------------------
+   Icônes Font Awesome
+------------------------------------------ */
+
+.btn-login i,
+.btn-register i {
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   BOUTON HAMBURGER
+========================================== */
+
+/*
+ * Caché sur desktop et tablette.
+ * Visible uniquement sur mobile.
+ */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--text);
+
+    cursor: pointer;
+}
+
+
+/* Icône Font Awesome */
+
+.menu-toggle i {
+    font-size: 22px;
+}
+
+/* ==========================================
+   DESKTOP
+========================================== */
+@media (min-width: 1024px) {
+    .header-container {
+        width: calc(100% - 80px);
+    }
+}
+
+/* ==========================================
+   TABLETTE
+========================================== */
+
+/*
+ * On conserve ici le comportement desktop :
+ * la navigation reste visible.
+ *
+ * Cela correspond au rendu tablette que tu
+ * m'as indiqué comme étant satisfaisant.
+ */
+
+@media (max-width: 1050px) {
+
+    .header-container {
+        gap: 15px;
+    }
+
+    .main-nav ul {
+        gap: 22px;
+    }
+
+    .main-nav a {
+        font-size: 13px;
+    }
+
+    .btn-login,
+    .btn-register {
+        padding-inline: 12px;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 800px) {
+
+    /* ------------------------------------------
+       Header mobile
+    ------------------------------------------ */
+
+    .header-container {
+        min-height: 76px;
+    }
+
+
+    /* ------------------------------------------
+       Logo mobile
+    ------------------------------------------ */
+
+    .logo img {
+        width: 125px;
+    }
+
+
+    /* ------------------------------------------
+       Actions desktop masquées
+    ------------------------------------------ */
+
+    .header-actions {
+        display: none;
+    }
+
+
+    /* ------------------------------------------
+       Navigation fermée
+    ------------------------------------------ */
+
+    .main-nav {
+        display: none;
+    }
+
+
+    /* ------------------------------------------
+       Navigation ouverte
+    ------------------------------------------ */
+
+    .main-nav.is-open {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        display: block;
+
+        padding: 18px var(--container-padding) 22px;
+
+        background-color: var(--white);
+
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+
+        z-index: 1000;
+    }
+
+
+    /* Liste mobile */
+
+    .main-nav.is-open ul {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+    }
+
+
+    /* Liens mobiles */
+
+    .main-nav.is-open a {
+        min-height: 50px;
+
+        justify-content: flex-start;
+
+        font-size: 14px;
+    }
+
+
+    /* Suppression du soulignement desktop */
+
+    .main-nav.is-open a.active::after {
+        display: none;
+    }
+
+
+    /* ------------------------------------------
+       Hamburger
+    ------------------------------------------ */
+
+    .menu-toggle {
+        display: flex;
+    }
+
+}
+
+
+/* ==========================================
+   PETITS ÉCRANS
+========================================== */
+
+@media (max-width: 480px) {
+
+    :root {
+        --container-padding: 18px;
+    }
+
+
+    /* Logo légèrement réduit */
+
+    .logo img {
+        width: 115px;
+    }
+
+}

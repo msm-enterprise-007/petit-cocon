@@ -1,0 +1,81 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   DOCUMENT
+========================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background-color: var(--white);
+
+    color: var(--text);
+
+    /*
+     * Police de base.
+     * Nous pourrons remplacer cette valeur par
+     * la police exacte de tes assets si elle existe.
+     */
+    font-family: Arial, Helvetica, sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ==========================================
+   LIENS
+========================================== */
+
+a {
+    color: inherit;
+}
+
+
+/* ==========================================
+   BOUTONS / FORMULAIRES
+========================================== */
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* ==========================================
+   CONTENEUR
+========================================== */
+
+.container {
+    width: min(
+        calc(100% - (var(--container-padding) * 2)),
+        var(--container-width)
+    );
+
+    margin-inline: auto;
+}
