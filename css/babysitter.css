@@ -6,25 +6,43 @@
     width: 100%;
 
     padding: 20px 18px;
+
 }
 
-.babysitter-container {
+/* .babysitter-container {
     position: relative;
 
     width: 100%;
+
     max-width: 760px;
 
     min-height: 230px;
 
     margin: 0 auto;
 
-    overflow: hidden;
+    overflow: hidden;   
 
     border-radius: 16px;
 
     background-color: #f8eee1;
-}
 
+    background-image: url("../assets/images/decorations/footer-bg.png");
+} */
+
+.babysitter-container {
+    position: relative;
+    width: 100%;
+    max-width: 760px;
+    min-height: 230px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 16px;
+
+    background-image: url("../assets/images/baby-sitters/babysitter-home.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+}
 
 /* ==========================================
    CONTENU
@@ -32,6 +50,7 @@
 
 .babysitter-content {
     position: relative;
+
     z-index: 2;
 
     width: 58%;
@@ -58,7 +77,9 @@
     font-family: Georgia, "Times New Roman", serif;
 
     font-size: 22px;
+
     line-height: 1.15;
+
     font-weight: 400;
 }
 
@@ -76,6 +97,7 @@
     color: var(--text);
 
     font-size: 10px;
+
     line-height: 1.5;
 }
 
@@ -119,9 +141,11 @@
     position: absolute;
 
     top: 0;
+
     right: 0;
 
-    width: 53%;
+    width: 55%;
+
     height: 100%;
 }
 
@@ -129,8 +153,10 @@
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
-    object-position: center;
+    object-fit: cover; 
+    object-position: 100% center;
+    /* background-size: cover;
+    background-position:  center; */
 }
 
 
@@ -148,6 +174,12 @@
         min-height: 220px;
 
         border-radius: 15px;
+
+        background-size: cover;
+
+        background-position: 55% center; /* background-position: 1% center; :Cela permet de choisir quelle partie de l'image reste visible sans jamais la déformer.*/
+        
+        background-repeat: no-repeat;
     }
 
     .babysitter-content {
@@ -181,6 +213,11 @@
     .babysitter-visual {
         width: 52%;
     }
+
+    /* .babysitter-visual img {
+         object-fit: cover; 
+         object-position: 80% center;
+    } */
 }
 
 

@@ -135,13 +135,12 @@
 @media (min-width: 801px) and (max-width: 1050px) {
 
     .site-footer {
-        /* background-size: auto 100%;
-        background-position: right bottom; */
         background-size: cover;
         background-position: center;
+        background-repeat: no-repeat;
         /* background-size: auto 100%;
-        background-position: right bottom;
-        background-repeat: no-repeat; */
+        background-position: right bottom;*/
+       
     }
 
     .footer-container {
@@ -165,6 +164,7 @@
     .footer-socials {
         gap: 18px;
         margin-top: 28px;
+        margin-left: 21px;
     }
 
     .footer-socials a {
@@ -179,7 +179,7 @@
     }
 
     .footer-column ul {
-        gap: 18px;
+        gap: 10px;
     }
 
     .footer-column a {
@@ -207,8 +207,8 @@
         /* background-size: 130px auto;
         background-position: right bottom; */
         background-size: cover;
-        background-position: 1% center;
-         background-repeat: no-repeat;
+        background-position: 100% center; /* background-position: 1% center; :Cela permet de choisir quelle partie de l'image reste visible sans jamais la déformer.*/
+        background-repeat: no-repeat;
     }
 
     .footer-container {
@@ -230,11 +230,13 @@
 
     .footer-logo {
         width: 200px;
+        margin-right: 170px;
     }
 
     .footer-socials {
         gap: 18px;
         margin-top: 22px;
+        margin-right: 170px;
     }
 
     .footer-socials a {
@@ -275,3 +277,13 @@
         line-height: 1.4;
     }
 }
+
+/* ==========================================
+   FOOTER — DESKTOP
+========================================== */
+@media (min-width: 1051px) {
+    .footer-socials {
+        margin-top: 28px;
+        margin-left: 57px;
+    }
+} 
