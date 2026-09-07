@@ -1,0 +1,277 @@
+/* ==========================================
+   FOOTER Couleur du background footer générer 3 "#F7E8D8"
+========================================== */
+
+.site-footer {
+    position: relative;
+    width: 100%;
+    background-color: #fdf8f1;
+
+    /* Remplace le nom du fichier si ton background
+       porte un autre nom */
+    background-image: url("../assets/images/decorations/footer-bg.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+}
+
+.footer-container {
+    width: min(
+        calc(100% - (var(--container-padding) * 2)),
+        1400px
+    );
+    margin-inline: auto;
+    padding: 40px 0 55px;  /* padding: 70px 0 55px; : ancienne valeur*/
+
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr 1fr 1fr 0.9fr;
+    gap: 45px;
+}
+
+/* Logo */
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    width: 420px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Réseaux sociaux */
+
+.footer-socials {
+    display: flex;
+    gap: 38px;    /* Espacement entre les icones */
+    margin-top: 25px;   /* L'espacement entre le haut des élément du footer et les icones */
+}
+
+.footer-socials a {
+    width: 62px;  /* Taille des icones : du plus fin au plus gros (forme ovale) longeur*/
+    height: 62px; /* Largeur, hauteur */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+
+    color: var(--primary);
+    font-size: 30px;
+    text-decoration: none;
+
+    transition:
+        background-color var(--transition),
+        color var(--transition);
+}
+
+.footer-socials a:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+/* Colonnes */
+
+.footer-column h2 {
+    margin: 8px 0 48px;
+
+    color: #111;
+    font-size: 22px;
+    line-height: 1.2;/* line-height: 1.2; */
+    font-weight: 700;
+}
+
+.footer-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-column a {
+    color: #171717;
+    font-size: 17px;
+    line-height: 1.45;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: var(--primary);
+}
+
+/* Copyright */
+
+.footer-bottom {
+    width: min(
+        calc(100% - (var(--container-padding) * 2)),
+        1400px
+    );
+    margin-inline: auto;
+    padding: 10px 0 30px; /* padding: 28px 0 50px; : ancienne valeur */
+
+    /* border-top: 1px solid rgba(198, 139, 44, 0.25); : ligne du footer */
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #171717;
+    font-size: 17px;
+}
+
+/* ==========================================
+   FOOTER — TABLETTE
+========================================== */
+
+@media (min-width: 801px) and (max-width: 1050px) {
+
+    .site-footer {
+        /* background-size: auto 100%;
+        background-position: right bottom; */
+        background-size: cover;
+        background-position: center;
+        /* background-size: auto 100%;
+        background-position: right bottom;
+        background-repeat: no-repeat; */
+    }
+
+    .footer-container {
+        width: calc(100% - 36px);
+        padding: 45px 0 35px;
+
+        grid-template-columns:
+            1.5fr
+            1fr
+            1.15fr
+            1.15fr
+            1fr;
+
+        gap: 24px;
+    }
+
+    .footer-logo {
+        width: 230px;
+    }
+
+    .footer-socials {
+        gap: 18px;
+        margin-top: 28px;
+    }
+
+    .footer-socials a {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .footer-column h2 {
+        margin: 5px 0 28px;
+        font-size: 16px;
+    }
+
+    .footer-column ul {
+        gap: 18px;
+    }
+
+    .footer-column a {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        width: calc(100% - 48px);
+        padding: 20px 0 30px;
+    }
+
+    .footer-bottom p {
+        font-size: 13px;
+    }
+}
+
+
+/* ==========================================
+   FOOTER — MOBILE
+========================================== */
+
+@media (max-width: 800px) {
+
+    .site-footer {
+        /* background-size: 130px auto;
+        background-position: right bottom; */
+        background-size: cover;
+        background-position: 1% center;
+         background-repeat: no-repeat;
+    }
+
+    .footer-container {
+        width: calc(100% - 86px);
+        padding: 25px 0 10px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 22px;
+    }
+
+    /* Logo sur toute la largeur */
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo {
+        width: 200px;
+    }
+
+    .footer-socials {
+        gap: 18px;
+        margin-top: 22px;
+    }
+
+    .footer-socials a {
+        width: 44px;
+        height: 44px;
+        font-size: 19px;
+    }
+
+    /* Colonnes */
+
+    .footer-column {
+        text-align: left;
+    }
+
+    .footer-column h2 {
+        margin: 0 0 15px;
+        font-size: 15px;
+    }
+
+    .footer-column ul {
+        gap: 10px;
+    }
+
+    .footer-column a {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    /* Copyright */
+
+    .footer-bottom {
+        width: calc(100% - 36px);
+        padding: 17px 0 25px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+}

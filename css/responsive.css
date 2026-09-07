@@ -9,3 +9,18 @@
  * Pour le moment :
  * Header uniquement.
  */
+
+ @media (min-width: 1051px) {
+    .home-bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .home-bottom .babysitter-section,
+    .home-bottom .testimonials-section {
+        width: 100%;
+        margin: 0;
+    }
+}

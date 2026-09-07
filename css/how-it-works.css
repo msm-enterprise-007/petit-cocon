@@ -1,0 +1,680 @@
+/* ==========================================
+   COMMENT ÇA MARCHE
+========================================== */
+
+.how-it-works {
+    width: 100%;
+
+    padding: 30px 18px;
+}
+
+.how-it-works-container {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding: 28px 22px 30px;
+
+    background-color: #fffdf9;
+
+    border-radius: 20px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+
+/* ==========================================
+   TITRE
+========================================== */
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 28px;
+}
+
+.section-eyebrow {
+    margin: 0 0 6px;
+
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    color: #35271d;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 29px;
+    line-height: 1.15;
+}
+
+
+/* ==========================================
+   DÉCORATION
+========================================== */
+
+.heading-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.heading-decoration span {
+    width: 45px;
+    height: 1px;
+
+    background-color: var(--primary);
+}
+
+.heading-decoration i {
+    color: var(--primary);
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   ÉTAPES
+========================================== */
+
+.steps {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* Ligne verticale */
+
+.steps::before {
+    content: "";
+
+    position: absolute;
+
+    top: 42px;
+    bottom: 42px;
+
+    left: 35px;
+
+    width: 1px;
+
+    border-left: 2px dashed var(--primary);
+
+    opacity: 0.7;
+}
+
+
+/* ==========================================
+   ÉTAPE
+========================================== */
+
+.step {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+
+    grid-template-columns: 70px 38px 1fr 20px;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-height: 82px;
+}
+
+
+/* ==========================================
+   ICÔNE
+========================================== */
+
+.step-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--primary);
+
+    border-radius: 50%;
+
+    background-color: #fffdf9;
+}
+
+.step-icon i {
+    color: #17130f;
+
+    font-size: 30px;
+}
+
+
+/* ==========================================
+   NUMÉRO
+========================================== */
+
+.step-number {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: var(--primary);
+
+    color: var(--white);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   TEXTE
+========================================== */
+
+.step-content h3 {
+    margin: 0 0 3px;
+
+    color: var(--primary);
+
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+.step-content p {
+    max-width: 390px;
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+
+/* ==========================================
+   FLÈCHE
+========================================== */
+
+.step-arrow {
+    color: var(--primary);
+
+    font-size: 18px;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+    .how-it-works {
+        padding: 22px 18px;
+    }
+
+    .how-it-works-container {
+        padding: 25px 14px 28px;
+
+        border-radius: 18px;
+    }
+
+    .section-heading {
+        margin-bottom: 24px;
+    }
+
+    .section-eyebrow {
+        font-size: 10px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .heading-decoration {
+        margin-top: 8px;
+    }
+
+    .heading-decoration span {
+        width: 38px;
+    }
+
+    .steps {
+        gap: 8px;
+    }
+
+    .steps::before {
+        left: 30px;
+
+        top: 38px;
+        bottom: 38px;
+    }
+
+    .step {
+        grid-template-columns: 60px 30px 1fr 14px;
+
+        gap: 7px;
+
+        min-height: 78px;
+    }
+
+    .step-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .step-icon i {
+        font-size: 26px;
+    }
+
+    .step-number {
+        width: 26px;
+        height: 26px;
+
+        font-size: 12px;
+    }
+
+    .step-content h3 {
+        font-size: 14px;
+    }
+
+    .step-content p {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    .step-arrow {
+        font-size: 15px;
+    }
+}
+
+
+/* ==========================================
+   DESKTOP — 4 ÉTAPES HORIZONTALES
+========================================== */
+
+@media (min-width: 801px) {
+
+    .how-it-works {
+        padding: 40px 24px;
+    }
+
+    .how-it-works-container {
+        max-width: 1240px;
+
+        padding: 32px 55px 42px;
+
+        border-radius: 18px;
+    }
+
+    .section-heading {
+        margin-bottom: 42px;
+    }
+
+    .section-eyebrow {
+        font-size: 14px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    /* ------------------------------------------
+       Grille horizontale
+    ------------------------------------------ */
+
+    .steps {
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 45px;
+    }
+
+    /* Suppression de la ligne verticale mobile */
+    .steps::before {
+        display: none;
+    }
+
+    /* ------------------------------------------
+       Chaque étape
+    ------------------------------------------ */
+
+    .step {
+        position: relative;
+
+        display: grid;
+
+        grid-template-columns: 95px 1fr;
+
+        grid-template-rows: 82px auto;
+
+        column-gap: 15px;
+
+        min-height: 180px;
+    }
+
+    /* ------------------------------------------
+       Icône
+    ------------------------------------------ */
+
+    .step-icon {
+        grid-column: 1;
+        grid-row: 1;
+
+        width: 82px;
+        height: 82px;
+    }
+
+    .step-icon i {
+        font-size: 34px;
+    }
+
+    /* ------------------------------------------
+       Numéro
+    ------------------------------------------ */
+
+    .step-number {
+        position: absolute;
+
+        top: 69px;
+        left: -4px;
+
+        width: 30px;
+        height: 30px;
+
+        z-index: 3;
+    }
+
+    /* ------------------------------------------
+       Texte
+    ------------------------------------------ */
+
+    .step-content {
+        grid-column: 2;
+        grid-row: 1 / 3;
+
+        align-self: center;
+    }
+
+    .step-content h3 {
+        margin-bottom: 7px;
+
+        font-size: 16px;
+    }
+
+    .step-content p {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+    /* ------------------------------------------
+       Flèche entre les étapes
+    ------------------------------------------ */
+
+    .step-arrow {
+        position: absolute;
+
+        top: 39px;
+        right: -30px;
+
+        color: var(--primary);
+
+        font-size: 17px;
+    }
+
+    /* Ligne pointillée vers l'étape suivante */
+    .step:not(:last-child)::after {
+        content: "";
+
+        position: absolute;
+
+        top: 40px;
+        left: 92px;
+        right: -32px;
+
+        border-top: 2px dashed var(--primary);
+
+        z-index: 0;
+    }
+
+    .step-arrow {
+        z-index: 2;
+    }
+}
+
+
+/* ==========================================
+   TABLETTE
+========================================== */
+
+/* @media (min-width: 801px) and (max-width: 1050px) {
+
+    .how-it-works-container {
+        padding-inline: 28px;
+    }
+
+    .steps {
+        gap: 22px;
+    }
+
+    .step {
+        grid-template-columns: 65px 1fr;
+
+        column-gap: 10px;
+    }
+
+    .step-icon {
+        width: 65px;
+        height: 65px;
+    }
+
+    .step-icon i {
+        font-size: 28px;
+    }
+
+    .step-number {
+        top: 53px;
+        left: -4px;
+
+        width: 27px;
+        height: 27px;
+    }
+
+    .step-content h3 {
+        font-size: 14px;
+    }
+
+    .step-content p {
+        font-size: 11px;
+    }
+
+    .step-arrow {
+        right: -18px;
+    }
+
+    .step:not(:last-child)::after {
+        left: 72px;
+        right: -20px;
+    }
+} */
+
+/* ==========================================
+   TABLETTE — 801px à 1050px
+========================================== */
+
+@media (min-width: 801px) and (max-width: 1050px) {
+
+    .how-it-works {
+        padding: 30px 18px;
+    }
+
+    .how-it-works-container {
+        width: 100%;
+        max-width: none;
+
+        padding: 28px 35px 32px;
+
+        border-radius: 18px;
+    }
+
+    /* ------------------------------------------
+       TITRE
+    ------------------------------------------ */
+
+    .section-heading {
+        margin-bottom: 34px;
+    }
+
+    .section-eyebrow {
+        font-size: 11px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .heading-decoration {
+        margin-top: 8px;
+    }
+
+    .heading-decoration span {
+        width: 42px;
+    }
+
+
+    /* ------------------------------------------
+       LES 4 ÉTAPES
+    ------------------------------------------ */
+
+    .steps {
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 22px;
+    }
+
+    .steps::before {
+        display: none;
+    }
+
+
+    /* ------------------------------------------
+       ÉTAPE
+    ------------------------------------------ */
+
+    .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        min-height: 0;
+
+        gap: 0;
+
+        text-align: center;
+    }
+
+
+    /* ------------------------------------------
+       ICÔNE
+    ------------------------------------------ */
+
+    .step-icon {
+        width: 70px;
+        height: 70px;
+
+        margin-bottom: 38px;
+    }
+
+    .step-icon i {
+        font-size: 30px;
+    }
+
+
+    /* ------------------------------------------
+       NUMÉRO
+    ------------------------------------------ */
+
+    .step-number {
+        position: absolute;
+
+        top: 51px;
+        left: calc(50% - 40px);
+
+        width: 28px;
+        height: 28px;
+
+        z-index: 3;
+    }
+
+
+    /* ------------------------------------------
+       TEXTE
+    ------------------------------------------ */
+
+    .step-content {
+        width: 100%;
+    }
+
+    .step-content h3 {
+        margin-bottom: 7px;
+
+        font-size: 14px;
+        line-height: 1.25;
+    }
+
+    .step-content p {
+        max-width: 190px;
+
+        margin-inline: auto;
+
+        font-size: 11px;
+        line-height: 1.55;
+    }
+
+
+    /* ------------------------------------------
+       FLÈCHES / LIGNES
+    ------------------------------------------ */
+
+    .step-arrow {
+        display: none;
+    }
+
+    .step:not(:last-child)::after {
+        content: "";
+
+        position: absolute;
+
+        top: 34px;
+        left: calc(50% + 38px);
+        right: -25px;
+
+        border-top: 2px dashed var(--primary);
+
+        z-index: 0;
+    }
+}

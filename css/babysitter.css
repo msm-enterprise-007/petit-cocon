@@ -1,0 +1,276 @@
+/* ==========================================
+   ESPACE BABY-SITTER
+========================================== */
+
+.babysitter-section {
+    width: 100%;
+
+    padding: 20px 18px;
+}
+
+.babysitter-container {
+    position: relative;
+
+    width: 100%;
+    max-width: 760px;
+
+    min-height: 230px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background-color: #f8eee1;
+}
+
+
+/* ==========================================
+   CONTENU
+========================================== */
+
+.babysitter-content {
+    position: relative;
+    z-index: 2;
+
+    width: 58%;
+
+    padding: 24px 0 24px 28px;
+}
+
+.babysitter-title {
+    margin: 0 0 4px;
+
+    color: #35271d;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.babysitter-content h2 {
+    margin: 0 0 10px;
+
+    color: #35271d;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 22px;
+    line-height: 1.15;
+    font-weight: 400;
+}
+
+.babysitter-content h2 span {
+    display: block;
+
+    color: var(--primary);
+}
+
+.babysitter-description {
+    max-width: 280px;
+
+    margin: 0 0 16px;
+
+    color: var(--text);
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   BOUTON
+========================================== */
+
+.babysitter-btn {
+    min-height: 38px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 15px;
+
+    border-radius: 5px;
+
+    background-color: #35271d;
+    color: var(--white);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.babysitter-btn i {
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   VISUEL
+========================================== */
+
+.babysitter-visual {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 53%;
+    height: 100%;
+}
+
+.babysitter-visual img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+    .babysitter-section {
+        padding: 18px;
+    }
+
+    .babysitter-container {
+        min-height: 220px;
+
+        border-radius: 15px;
+    }
+
+    .babysitter-content {
+        width: 59%;
+
+        padding: 22px 0 20px 20px;
+    }
+
+    .babysitter-title {
+        font-size: 18px;
+    }
+
+    .babysitter-content h2 {
+        font-size: 19px;
+    }
+
+    .babysitter-description {
+        max-width: 205px;
+
+        font-size: 9px;
+    }
+
+    .babysitter-btn {
+        min-height: 35px;
+
+        padding-inline: 12px;
+
+        font-size: 9px;
+    }
+
+    .babysitter-visual {
+        width: 52%;
+    }
+}
+
+
+/* ==========================================
+   DESKTOP — BABY-SITTER + TÉMOIGNAGES
+========================================== */
+
+@media (min-width: 1051px) {
+
+    .babysitter-section {
+        padding: 30px 24px;
+    }
+
+    .babysitter-container {
+        max-width: 1240px;
+        min-height: 310px;
+
+        display: grid;
+        grid-template-columns: 47% 53%;
+
+        margin: 0 auto;
+
+        background-color: #f8eee1;
+        border-radius: 16px;
+    }
+
+
+    /* ------------------------------------------
+       BLOC BABY-SITTER
+    ------------------------------------------ */
+
+    .babysitter-content {
+        width: 100%;
+
+        padding: 30px 0 30px 32px;
+
+        align-self: center;
+    }
+
+    .babysitter-title {
+        margin-bottom: 5px;
+
+        font-size: 28px;
+    }
+
+    .babysitter-content h2 {
+        margin-bottom: 14px;
+
+        font-size: 28px;
+        line-height: 1.1;
+    }
+
+    .babysitter-description {
+        max-width: 400px;
+
+        margin-bottom: 22px;
+
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .babysitter-btn {
+        min-height: 48px;
+
+        padding-inline: 20px;
+
+        font-size: 14px;
+    }
+
+    .babysitter-btn i {
+        font-size: 15px;
+    }
+
+
+    /* ------------------------------------------
+       VISUEL
+    ------------------------------------------ */
+
+    .babysitter-visual {
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .babysitter-visual img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+    }
+}
