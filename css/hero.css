@@ -134,14 +134,27 @@
 ========================================== */
 
 .hero-container {
-    position: relative;
+    /* position: relative;
 
     min-height: 520px;
 
     display: flex;
     align-items: center;
 
+    overflow: hidden; */
+
+    position: relative;
+    width: 100%;
+    max-width: 760px;
+    min-height: 230px;
+    /* margin: 0 auto; */
     overflow: hidden;
+
+    background-image: url("../assets/images/hero/hero-main.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+   
 }
 
 
