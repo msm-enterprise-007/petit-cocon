@@ -121,7 +121,7 @@
 ========================================== */
 
 .hero {
-    position: relative;
+    /* position: relative; */
 
     width: 100%;
 
@@ -143,17 +143,17 @@
 
     overflow: hidden; */
 
-    position: relative;
+    /* position: relative;
     width: 100%;
     max-width: 760px;
-    min-height: 230px;
+    min-height: 230px; */
     /* margin: 0 auto; */
-    overflow: hidden;
+    /* overflow: hidden; */
 
     background-image: url("../assets/images/hero/hero-main.png");
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-size: contain;
-    background-position: right center;
+    background-position: right center; */
    
 }
 
@@ -287,7 +287,7 @@
    VISUEL
 ========================================== */
 
-.hero-visual {
+/* .hero-visual {
     position: absolute;
 
     top: 0;
@@ -297,15 +297,15 @@
     height: 100%;
 
     z-index: 1;
-}
+} */
 
-.hero-visual img {
+/* .hero-visual img {
     width: 100%;
     height: 100%;
 
     object-fit: cover;
     object-position: center;
-}
+} */
 
 
 /* ==========================================
@@ -358,9 +358,10 @@
 @media (max-width: 800px) {
 
     .hero-container {
-        min-height: auto;
-
-        display: block;
+        background-size: contain;
+        background-position: right center;
+        background-repeat: no-repeat;
+    
     }
 
     .hero-content {
@@ -415,7 +416,7 @@
         font-size: 16px;
     }
 
-    .hero-visual {
+    /* .hero-visual {
         width: 55%;
         height: 100%;
 
@@ -424,7 +425,7 @@
 
     .hero-visual img {
         object-fit: cover;
-    }
+    } */
 
     .hero-trust {
         margin: 0;
@@ -453,5 +454,71 @@
     .hero-trust-item span {
         font-size: 9px;
         line-height: 1.35;
+    }
+}
+
+/* ==========================================
+   DESKTOP — BABY-SITTER + TÉMOIGNAGES
+========================================== */
+
+@media (min-width: 1051px) {
+
+    /* .babysitter-section {
+        padding: 30px 24px;
+    }
+
+    .babysitter-container {
+        max-width: 1240px;
+        min-height: 310px;
+
+        display: grid;
+        grid-template-columns: 47% 53%;
+
+        margin: 0 auto;
+
+        background-color: #f8eee1;
+        border-radius: 16px;
+    } */
+
+
+     /* position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden; */
+
+    /* position: relative;
+    width: 100%;
+    max-width: 760px;
+    min-height: 230px; */
+    /* margin: 0 auto; */
+    /* overflow: hidden; */
+
+    /* background-image: url("../assets/images/hero/hero-main.png"); */
+    /* background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center; */
+
+
+    .hero-container {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+/* ==========================================
+   TABLETTE
+========================================== */
+
+@media (max-width: 1050px) {
+
+    .hero-container {
+        background-size: contain;
+        background-position: 135% 70%;
+        background-repeat: no-repeat;
     }
 }
