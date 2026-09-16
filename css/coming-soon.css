@@ -1,0 +1,108 @@
+/* ==========================================
+   PAGE TEMPORAIRE — COMING SOON
+========================================== */
+
+.coming-soon {
+
+    /* Image de fond */
+    min-height: calc(100vh - 96px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px var(--container-padding);
+
+    background-image: url("../assets/images/decorations/footer-bg1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* ==========================================
+   CONTENU
+========================================== */
+
+.coming-soon-content {
+
+    max-width: 650px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background-color: rgba(255, 255, 255, 0.90);
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==========================================
+   TITRE
+========================================== */
+
+.coming-soon-content h1 {
+
+    margin: 0 0 15px;
+
+    color: var(--text);
+
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   TEXTE
+========================================== */
+
+.coming-soon-content p {
+
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 800px) {
+
+    .coming-soon {
+
+        min-height: calc(100vh - 76px);
+
+        padding: 40px var(--container-padding);
+
+    }
+
+
+    .coming-soon-content {
+
+        padding: 30px 22px;
+
+    }
+
+
+    .coming-soon-content h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .coming-soon-content p {
+
+        font-size: 14px;
+
+    }
+
+}

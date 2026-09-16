@@ -406,6 +406,18 @@
     }
 
 
+     /* ------------------------------------------
+       Liste mobile
+    ------------------------------------------ */
+
+    .main-nav.is-open ul {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+    }
+
+
     /* Liens mobiles */
 
     .main-nav.is-open a {
@@ -424,6 +436,43 @@
     }
 
 
+    /* ------------------------------------------
+       Actions dans le menu mobile
+    ------------------------------------------ */
+
+    .main-nav.is-open ~ .header-actions {
+        position: absolute;
+
+        top: calc(100% + 218px);
+        left: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 0 var(--container-padding) 22px;
+
+        background-color: var(--white);
+
+        z-index: 1001;
+    }
+
+
+    /* Boutons mobile */
+
+    .main-nav.is-open ~ .header-actions .btn-login,
+    .main-nav.is-open ~ .header-actions .btn-register {
+        width: 100%;
+        min-height: 46px;
+
+        justify-content: center;
+
+        font-size: 14px;
+    }
+
+    
     /* ------------------------------------------
        Hamburger
     ------------------------------------------ */

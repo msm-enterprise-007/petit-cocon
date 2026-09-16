@@ -69,6 +69,8 @@
 
     <link rel="stylesheet" href="css/footer.css">
 
+    <link rel="stylesheet" href="css/register-modal.css">
+
 </head>
 
 
@@ -152,18 +154,6 @@
                         </a>
                     </li>
 
-                    <li>
-                        <a href="/pages/connexion.html">
-                            Se connecter
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="/pages/inscription.html">
-                            S'inscrire
-                        </a>
-                    </li>
-
                 </ul>
 
             </nav>
@@ -192,7 +182,7 @@
 
 
                 <!-- Inscription -->
-                <a
+                <!-- <a
                     href="pages/inscription.html"
                     class="btn-register"
                 >
@@ -204,7 +194,24 @@
 
                     <span>S'inscrire</span>
 
-                </a>
+                </a> -->
+                <!-- Inscription -->
+                <button
+                    type="button"
+                    class="btn-register"
+                    id="register-modal-open"
+                    aria-haspopup="dialog"
+                    aria-controls="register-modal"
+                >
+                
+                    <i
+                        class="fa-solid fa-user-plus"
+                        aria-hidden="true"
+                    ></i>
+                
+                    <span>S'inscrire</span>
+                
+                </button>
 
             </div>
 
@@ -233,6 +240,88 @@
         </div>
 
     </header>
+
+            <!-- ==========================================
+             MODAL CHOIX INSCRIPTION
+        ========================================== -->
+        
+        <div
+            class="register-modal"
+            id="register-modal"
+            aria-hidden="true"
+        >
+        
+            <div
+                class="register-modal-overlay"
+                data-modal-close
+            ></div>
+        
+            <div
+                class="register-modal-content"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="register-modal-title"
+            >
+        
+                <button
+                    type="button"
+                    class="register-modal-close"
+                    id="register-modal-close"
+                    aria-label="Fermer"
+                >
+                    <i
+                        class="fa-solid fa-xmark"
+                        aria-hidden="true"
+                    ></i>
+                </button>
+        
+                <p class="register-modal-eyebrow">
+                    Créer votre compte
+                </p>
+        
+                <h2 id="register-modal-title">
+                    Vous êtes...
+                </h2>
+        
+                <div class="register-modal-options">
+        
+                    <a
+                        href="pages/inscription-parent.html"
+                        class="register-option"
+                        data-register-type="parent"
+                    >
+                        <i
+                            class="fa-solid fa-people-roof"
+                            aria-hidden="true"
+                        ></i>
+        
+                        <span>
+                            <strong>Parent</strong>
+                            <small>Je recherche une baby-sitter</small>
+                        </span>
+                    </a>
+        
+                    <a
+                        href="pages/inscription-babysitter.html"
+                        class="register-option"
+                        data-register-type="babysitter"
+                    >
+                        <i
+                            class="fa-solid fa-baby"
+                            aria-hidden="true"
+                        ></i>
+        
+                        <span>
+                            <strong>Baby-sitter</strong>
+                            <small>Je souhaite garder des enfants</small>
+                        </span>
+                    </a>
+        
+                </div>
+        
+            </div>
+        
+        </div>
 
     <!-- ==========================================
          CONTENU PRINCIPAL
@@ -710,6 +799,7 @@
 
     <!-- ==========================================
          FOOTER
+         Sera réalisé plus tard.
     =========================================== -->
 
     <footer class="site-footer">

@@ -1,0 +1,644 @@
+/* ==========================================
+   INTRODUCTION CONNEXION
+========================================== */
+
+.connexion-intro {
+    position: relative;
+    width: 100%;
+    min-height: 260px;
+
+    background-color: #fef6e3;
+
+    /* Remplacer par ton asset */
+    background-image: url("../assets/images/connexion/connexion-bg.png");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.connexion-intro-content {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    padding: 38px 18px 30px;
+}
+
+.connexion-intro h1 {
+    margin: 0;
+    color: #35271d;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.connexion-intro-line {
+    display: block;
+
+    width: 82px;
+    height: 3px;
+
+    margin: 20px 0 25px;
+
+    border-radius: 999px;
+    background-color: var(--primary);
+}
+
+.connexion-intro p {
+    max-width: 320px;
+
+    margin: 0;
+
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   CARTE DE CONNEXION
+========================================== */
+
+.connexion-form-section {
+    width: 100%;
+    padding: 0 18px 22px;
+     background-color: #FEF6E3;
+}
+
+.connexion-form-card {
+    width: 100%;
+    padding: 28px 18px 25px;
+
+    border-radius: 16px;
+    background-color: #fffdf9;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ==========================================
+   TITRE
+========================================== */
+
+.connexion-form-heading {
+    text-align: center;
+}
+
+.connexion-form-heading h2 {
+    margin: 0;
+
+    color: #35271d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    line-height: 1.15;
+}
+
+.connexion-heading-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    margin: 13px 0 15px;
+}
+
+.connexion-heading-decoration span {
+    width: 40px;
+    height: 2px;
+
+    background-color: var(--primary);
+}
+
+.connexion-heading-decoration i {
+    color: var(--primary);
+    font-size: 17px;
+}
+
+.connexion-form-heading p {
+    margin: 0 0 25px;
+
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   CHAMPS
+========================================== */
+
+.connexion-form {
+    width: 100%;
+}
+
+.connexion-field {
+    margin-bottom: 18px;
+}
+
+.connexion-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #15263a;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.connexion-input-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+.connexion-input-wrapper > i {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+
+    color: var(--text);
+    font-size: 19px;
+
+    transform: translateY(-50%);
+}
+
+.connexion-input-wrapper input {
+    width: 100%;
+    min-height: 50px;
+
+    padding: 0 44px;
+
+    border: 1px solid #c9d0d8;
+    border-radius: 8px;
+
+    background-color: #fff;
+    color: var(--text);
+
+    font-size: 13px;
+
+    outline: none;
+    transition: border-color var(--transition);
+}
+
+.connexion-input-wrapper input::placeholder {
+      color: var(--text-light);
+}
+
+.connexion-input-wrapper input:focus {
+    border-color: var(--primary);
+}
+
+
+/* ==========================================
+   AFFICHER / MASQUER MOT DE PASSE
+========================================== */
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    border: 0;
+    background: transparent;
+
+    color: var(--text);
+    cursor: pointer;
+
+    transform: translateY(-50%);
+}
+
+.password-toggle i {
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   OPTIONS
+========================================== */
+
+.connexion-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    margin: 5px 0 20px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--text);
+    font-size: 11px;
+}
+
+.remember-me input {
+    width: 18px;
+    height: 18px;
+
+    margin: 0;
+
+    accent-color: var(--primary);
+}
+
+.connexion-options a {
+    color: var(--primary-dark);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   BOUTON CONNEXION
+========================================== */
+
+.connexion-submit {
+    width: 100%;
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 0 15px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background-color: var(--primary);
+    color: var(--white);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.connexion-submit i {
+    font-size: 18px;
+}
+
+
+/* ==========================================
+   CONNEXION SOCIALE
+========================================== */
+
+.connexion-social-title {
+    margin: 20px 0 15px;
+
+    color: var(--text);
+    font-size: 12px;
+    text-align: center;
+}
+
+.connexion-socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.connexion-social-btn {
+    min-height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 0 8px;
+
+    border: 1px solid #c9d0d8;
+    border-radius: 7px;
+
+    background-color: #fff;
+    color: var(--text);
+
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.connexion-social-btn i {
+    font-size: 17px;
+}
+
+
+/* ==========================================
+   INSCRIPTION
+========================================== */
+
+.connexion-register {
+    margin: 20px 0 0;
+
+    color: var(--text);
+    font-size: 11px;
+    text-align: center;
+}
+
+.connexion-register a {
+    margin-left: 5px;
+
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+/* ==========================================
+   BESOIN D'AIDE
+========================================== */
+
+.connexion-help {
+    width: 100%;
+    padding: 0 18px 18px;
+
+    background-color: #fef6e3;
+}
+
+.connexion-help-content {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-height: 105px;
+    padding: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(198, 139, 44, 0.18);
+    border-radius: 14px;
+
+    background-image: url("../assets/images/decorations/connexion-help-bg.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+}
+
+
+/* ICÔNE */
+
+.connexion-help-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+
+    color: var(--primary);
+}
+
+.connexion-help-icon i {
+    font-size: 22px;
+}
+
+
+/* TEXTE */
+
+.connexion-help-text {
+    position: relative;
+    z-index: 1;
+
+    flex: 1;
+}
+
+.connexion-help-text h2 {
+    margin: 0 0 5px;
+
+    color: #35271d;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    line-height: 1.15;
+}
+
+.connexion-help-text p {
+    margin: 0;
+
+    color: var(--text);
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+
+/* BOUTON */
+
+.connexion-help-button {
+    position: relative;
+    z-index: 1;
+
+    min-height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    flex-shrink: 0;
+
+    padding: 0 10px;
+
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+
+    background-color: rgba(255, 253, 249, 0.9);
+
+    color: var(--primary-dark);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.connexion-help-button i {
+    font-size: 14px;
+}
+
+/* ==========================================
+   ESPACE BABY-SITTER
+========================================== */
+
+.connexion-babysitter {
+    position: relative;
+
+    width: 100%;
+    padding: 5px 18px 30px;
+
+    background-color: #fef6e3;
+}
+
+.connexion-babysitter-content {
+    position: relative;
+
+    min-height: 190px;
+
+    padding: 24px 20px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background-color: #f8eee1;
+
+    /* Remplacer par ton asset */
+    background-image: url("../assets/images/baby-sitters/connexion-babysitter-bg.png");
+
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+}
+
+ /* Voile pour rendre le texte lisible */
+    .connexion-babysitter-content::before {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(254, 246, 227, 0.98) 0%,
+                rgba(254, 246, 227, 0.88) 35%,
+                rgba(254, 246, 227, 0.35) 65%,
+                rgba(254, 246, 227, 0) 100%
+            );
+
+        z-index: 0;
+        pointer-events: none;
+    }
+
+/* TEXTE */
+
+.connexion-babysitter-eyebrow {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 0 7px;
+
+    color: var(--primary);
+
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.connexion-babysitter h2 {
+    position: relative;
+    z-index: 1;
+
+    max-width: 190px;
+
+    margin: 0 0 9px;
+
+    color: #35271d;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    line-height: 1.15;
+    font-weight: 400;
+}
+
+.connexion-babysitter h2 span {
+    color: var(--primary);
+}
+
+.connexion-babysitter-text {
+    position: relative;
+    z-index: 1;
+
+    max-width: 190px;
+
+    margin: 0 0 15px;
+
+    color: var(--text);
+
+    font-size: 9px;
+    line-height: 1.45;
+}
+
+
+/* BOUTON */
+
+.connexion-babysitter-button {
+    position: relative;
+    z-index: 1;
+
+    min-height: 36px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 0 13px;
+
+    border-radius: 5px;
+
+    background-color: #35271d;
+    color: var(--white);
+
+    font-size: 9px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.connexion-babysitter-button i {
+    font-size: 11px;
+}
+
+/* =========================================================
+   TABLETTE — INTRODUCTION
+   ========================================================= */
+
+@media (min-width: 801px) and (max-width: 1050px) {
+
+    .connexion-intro {
+        min-height: 190px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .connexion-intro-content {
+        padding: 28px 42px 25px;
+    }
+    
+    .connexion-babysitter-content::before{
+        display: none;
+    }
+
+    .connexion-intro h1 {
+        font-size: 32px;
+    }
+
+    .connexion-intro-line {
+        width: 30px;
+        height: 2px;
+        margin: 13px 0 14px;
+    }
+
+    .connexion-intro p {
+        max-width: 250px;
+        font-size: 11px;
+        line-height: 1.5;
+    }
+}
