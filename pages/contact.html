@@ -68,6 +68,8 @@
 
 <link rel="stylesheet" href="../css/register-modal.css">
 
+<link rel="stylesheet" href="../css/contact.css">
+
 
 </head>
 
@@ -272,7 +274,7 @@
         <div class="register-modal-options">
 
             <a
-                href="pages/inscription-parent.html"
+                href="inscription-parent.html"
                 class="register-option"
                 data-register-type="parent"
             >
@@ -288,7 +290,7 @@
             </a>
 
             <a
-                href="pages/inscription-babysitter.html"
+                href="inscription-babysitter.html"
                 class="register-option"
                 data-register-type="babysitter"
             >
@@ -318,21 +320,291 @@
      CONTENU TEMPORAIRE
 ======================================= -->
 
-<main class="coming-soon">
+<main>
+    <section class="contact-intro" aria-labelledby="contact-title">
+    <div class="contact-intro-content">
 
-    <div class="coming-soon-content">
+        <h1 id="contact-title">Contactez-nous</h1>
 
-        <h1>Les prochaines pages arriveront bientôt</h1>
+        <div class="contact-title-decoration" aria-hidden="true">
+            <span></span>
+            <i class="fa-solid fa-heart"></i>
+            <span></span>
+        </div>
 
         <p>
-            Cette page est actuellement en préparation.
-            Elle sera bientôt disponible.
+            Vous avez une question, besoin d'aide ou une suggestion ?
+            Notre équipe est là pour vous répondre avec plaisir.
         </p>
 
     </div>
+</section>
 
+<!-- Formulaire de contact -->
+<section class="contact-form-section" aria-labelledby="contact-form-title">
+    <div class="contact-form-card">
+
+        <div class="contact-section-heading">
+            <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+            <h2 id="contact-form-title">Envoyez-nous un message</h2>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+
+            <div class="contact-field">
+                <label for="contact-name">Nom complet</label>
+                <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    placeholder="Votre nom"
+                    autocomplete="name"
+                    required
+                >
+            </div>
+
+            <div class="contact-field">
+                <label for="contact-email">Adresse e-mail</label>
+                <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    placeholder="Votre e-mail"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <div class="contact-field">
+                <label for="contact-subject">Sujet</label>
+                <div class="contact-select-wrapper">
+                    <select id="contact-subject" name="subject" required>
+                        <option value="" selected disabled>
+                            Choisissez un sujet
+                        </option>
+                        <option value="information">Demande d'information</option>
+                        <option value="parent">Question parent</option>
+                        <option value="babysitter">Question baby-sitter</option>
+                        <option value="technical">Problème technique</option>
+                        <option value="other">Autre</option>
+                    </select>
+
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="contact-field">
+                <label for="contact-message">Message</label>
+                <textarea
+                    id="contact-message"
+                    name="message"
+                    rows="4"
+                    placeholder="Décrivez votre demande..."
+                    required
+                ></textarea>
+            </div>
+
+            <button type="submit" class="contact-submit">
+                <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+                <span>Envoyer le message</span>
+            </button>
+
+            <p class="contact-confidentiality">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                <span>Vos informations sont traitées en toute confidentialité.</span>
+            </p>
+
+        </form>
+    </div>
+</section>
+
+<section class="contact-coordinates" aria-labelledby="contact-coordinates-title">
+    <div class="contact-coordinates-card">
+
+        <div class="contact-section-heading">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <h2 id="contact-coordinates-title">Nos coordonnées</h2>
+        </div>
+
+        <div class="contact-details">
+
+            <!-- Téléphone -->
+            <div class="contact-detail">
+                <div class="contact-detail-icon">
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                </div>
+
+                <div class="contact-detail-content">
+                    <h3>Téléphone</h3>
+                    <p>
+                        Nous sommes disponibles<br>
+                        du lundi au vendredi,<br>
+                        de 9h à 18h.
+                    </p>
+                    <a href="tel:+33184804725">01 84 80 47 25</a>
+                </div>
+            </div>
+
+            <!-- E-mail -->
+            <div class="contact-detail">
+                <div class="contact-detail-icon">
+                    <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                </div>
+
+                <div class="contact-detail-content">
+                    <h3>E-mail</h3>
+                    <a href="mailto:contact@petitcocon.fr">
+                        contact@petitcocon.fr
+                    </a>
+                    <p>
+                        Nous vous répondons<br>
+                        sous 24h ouvrées.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Zone d'intervention -->
+            <div class="contact-detail">
+                <div class="contact-detail-icon">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                </div>
+
+                <div class="contact-detail-content">
+                    <h3>Zone d’intervention</h3>
+                    <p>
+                        Île-de-France<br>
+                        Nous nous déplaçons dans<br>
+                        toute l’Île-de-France.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Horaires -->
+            <div class="contact-detail">
+                <div class="contact-detail-icon">
+                    <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                </div>
+
+                <div class="contact-detail-content">
+                    <h3>Horaires</h3>
+                    <p>
+                        Lundi - Vendredi : 9h - 18h<br>
+                        Samedi - Dimanche : Fermé
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Questions fréquentes -->
+<section class="contact-faq" aria-labelledby="contact-faq-title">
+    <div class="contact-faq-card">
+
+        <div class="contact-section-heading">
+            <i class="fa-regular fa-message" aria-hidden="true"></i>
+            <h2 id="contact-faq-title">Questions fréquentes</h2>
+        </div>
+
+        <p class="contact-faq-intro">
+            Trouvez rapidement des réponses aux questions les plus posées.
+        </p>
+
+        <div class="contact-faq-list">
+
+            <details class="contact-faq-item">
+                <summary>
+                    <span>Comment fonctionne Petit Cocon ?</span>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </summary>
+                <p>
+                    Découvrez comment Petit Cocon met en relation les familles
+                    et les baby-sitters.
+                </p>
+            </details>
+
+            <details class="contact-faq-item">
+                <summary>
+                    <span>Comment trouver une baby-sitter de confiance ?</span>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </summary>
+                <p>
+                    Consultez les profils et les informations disponibles
+                    pour trouver une baby-sitter adaptée à vos besoins.
+                </p>
+            </details>
+
+            <details class="contact-faq-item">
+                <summary>
+                    <span>Comment devenir baby-sitter sur Petit Cocon ?</span>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </summary>
+                <p>
+                    Créez votre compte baby-sitter et complétez votre profil.
+                </p>
+            </details>
+
+            <details class="contact-faq-item">
+                <summary>
+                    <span>Comment sont vérifiées les baby-sitters ?</span>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </summary>
+                <p>
+                    Retrouvez les informations relatives à notre processus
+                    de vérification.
+                </p>
+            </details>
+
+            <details class="contact-faq-item">
+                <summary>
+                    <span>Que faire en cas d’annulation ?</span>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </summary>
+                <p>
+                    Consultez les conditions applicables en cas d’annulation.
+                </p>
+            </details>
+
+        </div>
+    </div>
+</section>
+
+<!-- Bloc d'aide rapide -->
+<section class="contact-quick-help" aria-labelledby="contact-quick-help-title">
+    <div class="contact-quick-help-content">
+
+        <div class="contact-quick-help-logo">
+            <img
+                src="../assets/images/logo-mobile.png"
+                alt="Petit Cocon"
+            >
+        </div>
+
+        <div class="contact-quick-help-text">
+            <h2 id="contact-quick-help-title">Besoin d'aide rapidement ?</h2>
+
+            <p>
+                Consultez notre FAQ ou contactez-nous directement,
+                nous sommes là pour vous accompagner.
+            </p>
+        </div>
+
+        <div class="contact-quick-help-actions">
+            <a href="faq.html" class="contact-help-button contact-help-button-outline">
+                <i class="fa-regular fa-circle-question" aria-hidden="true"></i>
+                <span>Voir la FAQ</span>
+            </a>
+
+            <a href="#contact-form-title" class="contact-help-button contact-help-button-primary">
+                <i class="fa-regular fa-comment" aria-hidden="true"></i>
+                <span>Nous contacter</span>
+            </a>
+        </div>
+
+    </div>
+</section>
 </main>
-
 
 <!-- ==========================================
      FOOTER

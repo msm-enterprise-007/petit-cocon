@@ -1,0 +1,340 @@
+.parent-register-intro {
+    position: relative;
+    width: 100%;
+    min-height: 265px;
+
+    background-color: #fef6e3;
+    background-image: url("../assets/images/baby-sitters/inscription-parent-intro-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right top;
+}
+
+.parent-register-intro-content {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    padding: 42px 18px 30px;
+}
+
+.parent-register-intro h1 {
+    max-width: 310px;
+    margin: 0;
+
+    color: #35271d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    line-height: 1.12;
+    font-weight: 700;
+}
+
+.parent-register-intro-line {
+    display: block;
+    width: 80px;
+    height: 3px;
+
+    margin: 18px 0 20px;
+
+    border-radius: 999px;
+    background-color: var(--primary);
+}
+
+.parent-register-intro p {
+    max-width: 300px;
+    margin: 0;
+
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.parent-register-form-section {
+    width: 100%;
+    padding: 0 18px 14px;
+    background-color: #fef6e3;
+}
+
+.parent-register-form-card {
+    width: 100%;
+    padding: 22px 18px 20px;
+    border-radius: 14px;
+    background-color: #fffdf9;
+    box-shadow: 0 3px 15px rgba(44, 41, 38, 0.06);
+}
+
+.parent-register-section-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 22px;
+}
+
+.parent-register-section-heading > i {
+    flex-shrink: 0;
+    color: var(--primary);
+    font-size: 28px;
+}
+
+.parent-register-section-heading h2 {
+    margin: 0;
+    color: #35271d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+.parent-register-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.parent-register-field label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.parent-register-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.parent-register-input-wrapper > i:first-child {
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    color: var(--text-light);
+    font-size: 16px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.parent-register-input-wrapper input {
+    width: 100%;
+    min-height: 44px;
+    padding: 0 40px 0 40px;
+    border: 1px solid #d9dfe4;
+    border-radius: 7px;
+    background-color: #fff;
+    color: var(--text);
+    font-size: 12px;
+    outline: none;
+    transition: border-color var(--transition);
+}
+
+.parent-register-input-wrapper input::placeholder {
+    color: var(--text-light);
+}
+
+.parent-register-input-wrapper input:focus {
+    border-color: var(--primary);
+}
+
+.parent-register-password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--text-light);
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.parent-register-password-toggle i {
+    font-size: 14px;
+}
+
+.parent-register-password-note {
+    margin: 14px 0 0;
+    color: var(--text-light);
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.parent-register-field-full {
+    width: 100%;
+}
+
+.parent-register-section-heading h2 {
+    max-width: 250px;
+}
+
+.parent-register-section-heading h2 span,
+.parent-register-field label span {
+    color: var(--text-light);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.parent-register-input-wrapper select {
+    width: 100%;
+    min-height: 44px;
+    padding: 0 38px 0 40px;
+
+    border: 1px solid #d9dfe4;
+    border-radius: 7px;
+
+    background-color: #fff;
+    color: var(--text);
+
+    font-size: 12px;
+    outline: none;
+
+    appearance: none;
+
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--text-light) 50%),
+        linear-gradient(135deg, var(--text-light) 50%, transparent 50%);
+
+    background-position:
+        calc(100% - 17px) 19px,
+        calc(100% - 12px) 19px;
+
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+
+    transition: border-color var(--transition);
+}
+
+.parent-register-input-wrapper select:focus {
+    border-color: var(--primary);
+}
+
+.parent-register-security-section {
+    width: 100%;
+    padding: 0 18px;
+    background-color: #fef6e3;
+}
+
+.parent-register-security-card {
+    width: 100%;
+    padding: 20px 18px;
+    border-radius: 14px;
+    background-color: #fffdf9;
+    box-shadow: 0 3px 15px rgba(44, 41, 38, 0.06);
+}
+
+.parent-register-security-card .parent-register-section-heading {
+   white-space: nowrap;
+   font-size: 19px;
+}
+
+.parent-register-checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.parent-register-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.parent-register-checkbox input {
+    flex-shrink: 0;
+    width: 15px;
+    height: 15px;
+    margin: 1px 0 0;
+
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.parent-register-checkbox label {
+    color: var(--text-light);
+    font-size: 10px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.parent-register-checkbox a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.parent-register-checkbox a:hover {
+    text-decoration: underline;
+}
+
+.parent-register-submit-section {
+    width: 100%;
+    padding: 0 18px;
+    margin-top: 12px;
+    background-color: #fef6e3;
+}
+
+.parent-register-submit {
+    width: 90%;
+    min-height: 48px;
+    margin-inline: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 0 16px;
+    border: 0;
+    border-radius: 7px;
+
+    background-color: var(--primary);
+    color: var(--white);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.parent-register-submit:hover {
+    background-color: var(--primary-dark);
+}
+
+.parent-register-submit:active {
+    transform: translateY(1px);
+}
+
+.parent-register-submit i {
+    font-size: 13px;
+}
+
+.parent-register-privacy-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+
+    margin: 10px 22px 25px;
+
+    text-align: left;
+}
+
+.parent-register-privacy-note i {
+    flex-shrink: 0;
+    margin-top: 2px;
+
+    color: var(--primary);
+    font-size: 12px;
+}
+
+.parent-register-privacy-note p {
+    margin: 0;
+
+    color: var(--text-light);
+    font-size: 9px;
+    line-height: 1.45;
+}

@@ -67,6 +67,8 @@
 
 <link rel="stylesheet" href="../css/register-modal.css">
 
+<link rel="stylesheet" href="../css/parent-register.css">
+
 </head>
 
 <body>
@@ -266,7 +268,7 @@
         <div class="register-modal-options">
 
             <a
-                href="pages/inscription-parent.html"
+                href="inscription-parent.html"
                 class="register-option"
                 data-register-type="parent"
             >
@@ -282,7 +284,7 @@
             </a>
 
             <a
-                href="pages/inscription-babysitter.html"
+                href="inscription-babysitter.html"
                 class="register-option"
                 data-register-type="babysitter"
             >
@@ -312,19 +314,308 @@
      CONTENU TEMPORAIRE
 ======================================= -->
 
-<main class="coming-soon">
+<main>
+<section class="parent-register-intro" aria-labelledby="parent-register-title">
+    <div class="parent-register-intro-content">
+        <h1 id="parent-register-title">
+            Rejoignez Petit Cocon<br>
+            en tant que parent
+        </h1>
 
-    <div class="coming-soon-content">
-
-        <h1>Les prochaines pages arriveront bientôt</h1>
+        <span class="parent-register-intro-line"></span>
 
         <p>
-            Cette page est actuellement en préparation.
-            Elle sera bientôt disponible.
+            Créez votre compte parent pour trouver un baby-sitter
+            idéale et gérer sereinement vos besoins de garde.
+        </p>
+    </div>
+</section>
+
+<section class="parent-register-form-section" aria-labelledby="parent-personal-info-title">
+    <div class="parent-register-form-card">
+
+        <div class="parent-register-section-heading">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+            <h2 id="parent-personal-info-title">Informations personnelles</h2>
+        </div>
+
+        <div class="parent-register-fields">
+
+            <div class="parent-register-field">
+                <label for="parent-firstname">Prénom</label>
+                <div class="parent-register-input-wrapper">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    <input
+                        type="text"
+                        id="parent-firstname"
+                        name="firstname"
+                        placeholder="Votre prénom"
+                        autocomplete="given-name"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="parent-register-field">
+                <label for="parent-lastname">Nom</label>
+                <div class="parent-register-input-wrapper">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    <input
+                        type="text"
+                        id="parent-lastname"
+                        name="lastname"
+                        placeholder="Votre nom"
+                        autocomplete="family-name"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="parent-register-field">
+                <label for="parent-email">Adresse e-mail</label>
+                <div class="parent-register-input-wrapper">
+                    <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                    <input
+                        type="email"
+                        id="parent-email"
+                        name="email"
+                        placeholder="exemple@email.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="parent-register-field">
+                <label for="parent-phone">Téléphone</label>
+                <div class="parent-register-input-wrapper">
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                    <input
+                        type="tel"
+                        id="parent-phone"
+                        name="phone"
+                        placeholder="07 00 00 00 00"
+                        autocomplete="tel"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="parent-register-field">
+                <label for="parent-password">Mot de passe</label>
+                <div class="parent-register-input-wrapper">
+                    <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                    <input
+                        type="password"
+                        id="parent-password"
+                        name="password"
+                        placeholder="Créez un mot de passe"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+                    <button
+                        type="button"
+                        class="parent-register-password-toggle"
+                        aria-label="Afficher le mot de passe"
+                    >
+                        <i class="fa-regular fa-eye" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="parent-register-field">
+                <label for="parent-password-confirm">Confirmer le mot de passe</label>
+                <div class="parent-register-input-wrapper">
+                    <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                    <input
+                        type="password"
+                        id="parent-password-confirm"
+                        name="password_confirm"
+                        placeholder="Confirmez votre mot de passe"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+                    <button
+                        type="button"
+                        class="parent-register-password-toggle"
+                        aria-label="Afficher le mot de passe"
+                    >
+                        <i class="fa-regular fa-eye" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="parent-register-password-note">
+            Minimum 8 caractères avec au moins une majuscule,
+            une minuscule et un chiffre.
         </p>
 
     </div>
+</section>
 
+<section class="parent-register-form-section" aria-labelledby="parent-family-info-title">
+    <div class="parent-register-form-card">
+
+        <div class="parent-register-section-heading">
+            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+            <h2 id="parent-family-info-title">Informations sur votre famille</h2>
+        </div>
+
+        <div class="parent-register-fields">
+
+            <div class="parent-register-field">
+                <label for="parent-status">Vous êtes</label>
+                <div class="parent-register-input-wrapper">
+                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                    <select id="parent-status" name="status" required>
+                        <option value="" selected disabled>Sélectionnez</option>
+                        <option value="parent">Parent</option>
+                        <option value="tuteur">Tuteur / Tutrice</option>
+                        <option value="famille">Famille d'accueil</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="parent-register-field">
+                <label for="parent-children-count">Nombre d'enfants</label>
+                <div class="parent-register-input-wrapper">
+                    <i class="fa-solid fa-children" aria-hidden="true"></i>
+                    <select id="parent-children-count" name="children_count" required>
+                        <option value="" selected disabled>Sélectionnez</option>
+                        <option value="1">1 enfant</option>
+                        <option value="2">2 enfants</option>
+                        <option value="3">3 enfants</option>
+                        <option value="4">4 enfants</option>
+                        <option value="5+">5 enfants ou plus</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="parent-register-field parent-register-field-full">
+                <label for="parent-children-ages">
+                    Âge de vos enfants <span>(optionnel)</span>
+                </label>
+                <div class="parent-register-input-wrapper">
+                    <i class="fa-solid fa-child" aria-hidden="true"></i>
+                    <input
+                        type="text"
+                        id="parent-children-ages"
+                        name="children_ages"
+                        placeholder="Ex : 2 ans, 5 ans, 8 ans"
+                    >
+                </div>
+            </div>
+
+            <div class="parent-register-field parent-register-field-full">
+                <label for="parent-address">Votre adresse</label>
+                <div class="parent-register-input-wrapper">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <input
+                        type="text"
+                        id="parent-address"
+                        name="address"
+                        placeholder="Votre adresse complète"
+                        autocomplete="street-address"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="parent-register-field">
+                <label for="parent-postcode">Code postal</label>
+                <div class="parent-register-input-wrapper">
+                    <input
+                        type="text"
+                        id="parent-postcode"
+                        name="postcode"
+                        placeholder="75000"
+                        inputmode="numeric"
+                        autocomplete="postal-code"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="parent-register-field">
+                <label for="parent-city">Ville</label>
+                <div class="parent-register-input-wrapper">
+                    <input
+                        type="text"
+                        id="parent-city"
+                        name="city"
+                        placeholder="Votre ville"
+                        autocomplete="address-level2"
+                        required
+                    >
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="parent-register-security-section" aria-labelledby="parent-security-title">
+    <div class="parent-register-security-card">
+
+        <div class="parent-register-section-heading">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            <h2 id="parent-security-title">Sécurité &amp; confidentialité</h2>
+        </div>
+
+        <div class="parent-register-checkbox-list">
+
+            <div class="parent-register-checkbox">
+                <input
+                    type="checkbox"
+                    id="parent-terms"
+                    name="terms"
+                    required
+                >
+
+                <label for="parent-terms">
+                    J'accepte les
+                    <a href="#">Conditions générales d'utilisation</a>
+                    et la
+                    <a href="#">Politique de confidentialité</a>.
+                </label>
+            </div>
+
+            <div class="parent-register-checkbox">
+                <input
+                    type="checkbox"
+                    id="parent-communications"
+                    name="communications"
+                >
+
+                <label for="parent-communications">
+                    J'accepte de recevoir des informations et
+                    communications de Petit Cocon.
+                </label>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="parent-register-submit-section">
+    <button type="submit" class="parent-register-submit">
+        <span>Créer mon compte parent</span>
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+    </button>
+</section>
+<div class="parent-register-privacy-note">
+    <i class="fa-solid fa-lock" aria-hidden="true"></i>
+
+    <p>
+        Vos informations sont traitées en toute confidentialité.
+    </p>
+</div>
 </main>
 
 

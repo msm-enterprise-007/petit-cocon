@@ -43,7 +43,6 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 >
 
-
 <!-- ==========================================
      FEUILLES DE STYLE
 =========================================== -->
@@ -66,6 +65,8 @@
 <link rel="stylesheet" href="../css/coming-soon.css">
 
 <link rel="stylesheet" href="../css/register-modal.css">
+
+<link rel="stylesheet" href="../css/inscription-babysitter.css">
 
 </head>
 
@@ -266,7 +267,7 @@
         <div class="register-modal-options">
 
             <a
-                href="pages/inscription-parent.html"
+                href="inscription-parent.html"
                 class="register-option"
                 data-register-type="parent"
             >
@@ -282,7 +283,7 @@
             </a>
 
             <a
-                href="pages/inscription-babysitter.html"
+                href="inscription-babysitter.html"
                 class="register-option"
                 data-register-type="babysitter"
             >
@@ -308,22 +309,583 @@
      Vide pour le moment
 =========================================== -->
 
-<!-- ======================================
-     CONTENU TEMPORAIRE
-======================================= -->
+<main>
+    <section class="babysitter-register-intro" aria-labelledby="babysitter-register-title">
+        <div class="babysitter-register-intro-content">
 
-<main class="coming-soon">
+            <h1 id="babysitter-register-title">
+                Rejoignez Petit Cocon
+            </h1>
 
-    <div class="coming-soon-content">
+            <span class="babysitter-register-intro-line"></span>
 
-        <h1>Les prochaines pages arriveront bientôt</h1>
+            <p>
+                Créez votre compte et postulez pour devenir
+                baby-sitter. Notre équipe vérifiera vos informations
+                avant publication de votre profil.
+            </p>
 
-        <p>
-            Cette page est actuellement en préparation.
-            Elle sera bientôt disponible.
+        </div>
+    </section>
+    <!-- Informations personnelles -->
+<section class="babysitter-register-form-section" aria-labelledby="personal-info-title">
+    <div class="babysitter-register-form-card">
+
+        <div class="babysitter-register-section-heading">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+            <h2 id="personal-info-title">Informations personnelles</h2>
+        </div>
+
+        <div class="babysitter-register-fields">
+
+            <div class="babysitter-register-field">
+                <label for="babysitter-firstname">Prénom</label>
+                <div class="babysitter-register-input-wrapper">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    <input
+                        type="text"
+                        id="babysitter-firstname"
+                        name="firstname"
+                        placeholder="Votre prénom"
+                        autocomplete="given-name"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="babysitter-register-field">
+                <label for="babysitter-lastname">Nom</label>
+                <div class="babysitter-register-input-wrapper">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    <input
+                        type="text"
+                        id="babysitter-lastname"
+                        name="lastname"
+                        placeholder="Votre nom"
+                        autocomplete="family-name"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="babysitter-register-field">
+                <label for="babysitter-birthdate">Date de naissance</label>
+                <div class="babysitter-register-input-wrapper">
+                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                    <input
+                        type="date"
+                        id="babysitter-birthdate"
+                        name="birthdate"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="babysitter-register-field">
+                <label for="babysitter-email">Adresse e-mail</label>
+                <div class="babysitter-register-input-wrapper">
+                    <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                    <input
+                        type="email"
+                        id="babysitter-email"
+                        name="email"
+                        placeholder="exemple@email.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="babysitter-register-field">
+                <label for="babysitter-phone">Téléphone</label>
+                <div class="babysitter-register-input-wrapper">
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                    <input
+                        type="tel"
+                        id="babysitter-phone"
+                        name="phone"
+                        placeholder="07 00 00 00 00"
+                        autocomplete="tel"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="babysitter-register-field">
+                <label for="babysitter-address">Adresse</label>
+                <div class="babysitter-register-input-wrapper">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <input
+                        type="text"
+                        id="babysitter-address"
+                        name="address"
+                        placeholder="Votre adresse complète"
+                        autocomplete="street-address"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="babysitter-register-field">
+                <label for="babysitter-postcode">Code postal</label>
+                <div class="babysitter-register-input-wrapper">
+                    <input
+                        type="text"
+                        id="babysitter-postcode"
+                        name="postcode"
+                        placeholder="75000"
+                        inputmode="numeric"
+                        autocomplete="postal-code"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="babysitter-register-field">
+                <label for="babysitter-city">Ville</label>
+                <div class="babysitter-register-input-wrapper">
+                    <input
+                        type="text"
+                        id="babysitter-city"
+                        name="city"
+                        placeholder="Votre ville"
+                        autocomplete="address-level2"
+                        required
+                    >
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Expérience et compétences -->
+<section
+    class="babysitter-register-form-section"
+    aria-labelledby="experience-title"
+>
+    <div class="babysitter-register-form-card">
+
+        <div class="babysitter-register-section-heading">
+
+            <i
+                class="fa-solid fa-child-reaching"
+                aria-hidden="true"
+            ></i>
+
+            <h2 id="experience-title">
+                Expérience et compétences
+            </h2>
+
+        </div>
+
+
+        <div class="babysitter-register-fields">
+
+
+            <!-- Expérience -->
+
+            <div class="babysitter-register-field">
+
+                <label for="babysitter-experience">
+                    Expérience avec les enfants
+                </label>
+
+                <div class="babysitter-register-input-wrapper">
+
+                    <i
+                        class="fa-solid fa-children"
+                        aria-hidden="true"
+                    ></i>
+
+                    <input
+                        type="text"
+                        id="babysitter-experience"
+                        name="experience"
+                        placeholder="Ex. garde d'enfants, famille, école..."
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Compétences -->
+
+            <div class="babysitter-register-field">
+
+                <label for="babysitter-skills">
+                    Compétences
+                </label>
+
+                <div class="babysitter-register-input-wrapper">
+
+                    <i
+                        class="fa-solid fa-star"
+                        aria-hidden="true"
+                    ></i>
+
+                    <input
+                        type="text"
+                        id="babysitter-skills"
+                        name="skills"
+                        placeholder="Ex. aide aux devoirs, langues, premiers secours, activités créatives..."
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Âges -->
+
+            <div class="babysitter-register-field">
+
+                <label for="babysitter-age-groups">
+                    À l'aise avec les âges
+                </label>
+
+                <div class="babysitter-register-input-wrapper">
+
+                    <i
+                        class="fa-solid fa-child"
+                        aria-hidden="true"
+                    ></i>
+
+                    <select
+                        id="babysitter-age-groups"
+                        name="age_groups"
+                        required
+                    >
+
+                        <option
+                            value=""
+                            selected
+                            disabled
+                        >
+                            Sélectionnez une tranche d'âge
+                        </option>
+
+                        <option value="0-3">
+                            0 à 3 ans
+                        </option>
+
+                        <option value="3-6">
+                            3 à 6 ans
+                        </option>
+
+                        <option value="6-10">
+                            6 à 10 ans
+                        </option>
+
+                        <option value="10-14">
+                            10 à 14 ans
+                        </option>
+
+                        <option value="all">
+                            Tous les âges
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Pièces justificatives -->
+<section
+    class="babysitter-register-form-section"
+    aria-labelledby="documents-title"
+>
+    <div class="babysitter-register-form-card">
+
+        <div class="babysitter-register-section-heading">
+
+            <i
+                class="fa-regular fa-folder-open"
+                aria-hidden="true"
+            ></i>
+
+            <h2 id="documents-title">
+                Pièces justificatives
+                <span>(optionnel)</span>
+            </h2>
+
+        </div>
+
+
+        <p class="babysitter-register-section-description">
+            Vous pouvez ajouter vos justificatifs maintenant ou
+            les transmettre ultérieurement.
+        </p>
+
+
+        <div class="babysitter-register-upload-list">
+
+            <!-- Pièce d'identité -->
+
+            <div class="babysitter-register-upload">
+
+                <div class="babysitter-register-upload-info">
+
+                    <i
+                        class="fa-regular fa-id-card"
+                        aria-hidden="true"
+                    ></i>
+
+                    <div>
+                        <strong>
+                            Pièce d'identité
+                        </strong>
+
+                        <span>
+                            Carte d'identité ou passeport
+                        </span>
+                    </div>
+
+                </div>
+
+                <label
+                    for="babysitter-id-document"
+                    class="babysitter-register-upload-button"
+                >
+                    <i
+                        class="fa-solid fa-arrow-up-from-bracket"
+                        aria-hidden="true"
+                    ></i>
+
+                    Ajouter
+                </label>
+
+                <input
+                    type="file"
+                    id="babysitter-id-document"
+                    name="id_document"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                    hidden
+                >
+
+            </div>
+
+
+            <!-- Autre justificatif -->
+
+            <div class="babysitter-register-upload">
+
+                <div class="babysitter-register-upload-info">
+
+                    <i
+                        class="fa-regular fa-file-lines"
+                        aria-hidden="true"
+                    ></i>
+
+                    <div>
+                        <strong>
+                            Autre justificatif
+                        </strong>
+
+                        <span>
+                            Diplôme, certificat, etc.
+                        </span>
+                    </div>
+
+                </div>
+
+                <label
+                    for="babysitter-other-document"
+                    class="babysitter-register-upload-button"
+                >
+                    <i
+                        class="fa-solid fa-arrow-up-from-bracket"
+                        aria-hidden="true"
+                    ></i>
+
+                    Ajouter
+                </label>
+
+                <input
+                    type="file"
+                    id="babysitter-other-document"
+                    name="other_document"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                    hidden
+                >
+
+            </div>
+
+        </div>
+
+
+        <p class="babysitter-register-upload-note">
+            Formats acceptés : PDF, JPG, JPEG ou PNG.
         </p>
 
     </div>
+</section>
+
+<!-- Mot de passe -->
+<section
+    class="babysitter-register-form-section"
+    aria-labelledby="password-title"
+>
+    <div class="babysitter-register-form-card">
+
+        <div class="babysitter-register-section-heading">
+
+            <i
+                class="fa-solid fa-lock"
+                aria-hidden="true"
+            ></i>
+
+            <h2 id="password-title">
+                Mot de passe
+            </h2>
+
+        </div>
+
+
+        <div class="babysitter-register-fields">
+
+            <!-- Mot de passe -->
+
+            <div class="babysitter-register-field">
+
+                <label for="babysitter-password">
+                    Mot de passe
+                </label>
+
+                <div class="babysitter-register-input-wrapper">
+
+                    <i
+                        class="fa-solid fa-lock"
+                        aria-hidden="true"
+                    ></i>
+
+                    <input
+                        type="password"
+                        id="babysitter-password"
+                        name="password"
+                        placeholder="Créez votre mot de passe"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Confirmation -->
+
+            <div class="babysitter-register-field">
+
+                <label for="babysitter-password-confirm">
+                    Confirmer le mot de passe
+                </label>
+
+                <div class="babysitter-register-input-wrapper">
+
+                    <i
+                        class="fa-solid fa-lock"
+                        aria-hidden="true"
+                    ></i>
+
+                    <input
+                        type="password"
+                        id="babysitter-password-confirm"
+                        name="password_confirm"
+                        placeholder="Confirmez votre mot de passe"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Conditions générales -->
+<section
+    class="babysitter-register-terms-section"
+    aria-labelledby="terms-title"
+>
+    <div class="babysitter-register-terms">
+
+        <div class="babysitter-register-checkbox">
+
+            <input
+                type="checkbox"
+                id="babysitter-terms"
+                name="terms"
+                required
+            >
+
+            <label for="babysitter-terms">
+
+                J'accepte les
+                <a href="#">
+                    Conditions générales d'utilisation
+                </a>
+                et la
+                <a href="#">
+                    Politique de confidentialité
+                </a>.
+
+            </label>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Création du compte -->
+<section class="babysitter-register-submit-section">
+
+    <button
+        type="submit"
+        class="babysitter-register-submit"
+    >
+
+        <span>
+            Créer mon compte et envoyer ma candidature
+        </span>
+
+        <i
+            class="fa-solid fa-arrow-right"
+            aria-hidden="true"
+        ></i>
+
+    </button>
+
+</section>
+
+<!-- Message de confidentialité -->
+<div class="babysitter-register-privacy-note">
+
+    <i
+        class="fa-solid fa-shield-halved"
+        aria-hidden="true"
+    ></i>
+
+    <p>
+        Vos informations sont protégées et utilisées uniquement
+        dans le cadre de votre inscription et de votre candidature.
+    </p>
+
+</div>
 
 </main>
 
