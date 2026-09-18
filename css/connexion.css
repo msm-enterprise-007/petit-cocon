@@ -606,39 +606,40 @@
     font-size: 11px;
 }
 
-/* =========================================================
-   TABLETTE — INTRODUCTION
-   ========================================================= */
+
+
+/* ========================================
+   CONNEXION — INTRODUCTION TABLETTE
+======================================== */
 
 @media (min-width: 801px) and (max-width: 1050px) {
 
     .connexion-intro {
-        min-height: 190px;
+        min-height: 192px;
         background-size: cover;
-        background-position: center;
+        background-position: center right;
     }
 
     .connexion-intro-content {
-        padding: 28px 42px 25px;
-    }
-    
-    .connexion-babysitter-content::before{
-        display: none;
+        max-width: 620px;
+        padding: 34px 35px 25px;
     }
 
     .connexion-intro h1 {
         font-size: 32px;
+        line-height: 1.15;
     }
 
     .connexion-intro-line {
         width: 30px;
         height: 2px;
-        margin: 13px 0 14px;
+        margin: 14px 0 14px;
     }
 
     .connexion-intro p {
-        max-width: 250px;
+        max-width: 300px;
         font-size: 11px;
         line-height: 1.5;
     }
+
 }
