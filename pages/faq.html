@@ -63,9 +63,11 @@
 <!-- Responsive -->
 <link rel="stylesheet" href="../css/responsive.css">
 
-<link rel="stylesheet" href="../css/coming-soon.css">
+<!-- <link rel="stylesheet" href="../css/coming-soon.css"> -->
 
 <link rel="stylesheet" href="../css/register-modal.css">
+
+<link rel="stylesheet" href="../css/faq.css">
 
 </head>
 
@@ -315,17 +317,119 @@
 
 <main class="coming-soon">
 
-    <div class="coming-soon-content">
+   <section class="faq-hero" aria-labelledby="faq-hero-title">
+    <div class="faq-hero-content">
 
-        <h1>Les prochaines pages arriveront bientôt</h1>
+        <div class="faq-hero-label">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i>
+            <span>FAQ</span>
+        </div>
+
+        <h1 id="faq-hero-title">
+            Vous avez des<br>
+            questions ?<br>
+            Nous avons<br>
+            <span>les réponses.</span>
+        </h1>
 
         <p>
-            Cette page est actuellement en préparation.
-            Elle sera bientôt disponible.
+            Retrouvez ici toutes les informations utiles
+            pour utiliser Petit Cocon en toute sérénité.
         </p>
 
-    </div>
+        <div class="faq-search">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
 
+            <input
+                type="search"
+                id="faq-search-input"
+                placeholder="Rechercher une question..."
+                aria-label="Rechercher une question"
+            >
+        </div>
+
+    </div>
+</section>
+
+<section class="faq-filter-section" aria-label="Filtrer les questions">
+    <div class="faq-filter">
+        <button type="button" class="faq-filter-button is-active">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+            <span>Parents</span>
+        </button>
+
+        <button type="button" class="faq-filter-button">
+            <i class="fa-solid fa-child-reaching" aria-hidden="true"></i>
+            <span>Baby-sitters</span>
+        </button>
+    </div>
+</section>
+
+<section class="faq-questions-section" aria-labelledby="faq-questions-title">
+    <div class="faq-questions-card">
+
+        <div class="faq-questions-heading">
+            <span class="faq-questions-label">QUESTIONS FRÉQUENTES</span>
+
+            <div class="faq-questions-decoration">
+                <span></span>
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                <span></span>
+            </div>
+
+            <h2 id="faq-questions-title">
+                Les réponses à vos interrogations
+            </h2>
+
+            <p>
+                Trouvez rapidement l'information dont vous avez besoin
+                parmi les questions les plus posées par les parents
+                et les baby-sitters.
+            </p>
+        </div>
+
+        <div class="faq-list">
+
+        </div>
+
+    </div>
+</section>
+<section class="faq-help-section" aria-labelledby="faq-help-title">
+    <div class="faq-help-card">
+
+        <div class="faq-help-content">
+            <div class="faq-help-label">
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                <span>UNE QUESTION SUPPLÉMENTAIRE ?</span>
+            </div>
+
+            <h2 id="faq-help-title">
+                Notre équipe est là pour<br>
+                vous aider !
+            </h2>
+
+            <p>
+                Si vous ne trouvez pas la réponse à votre question,
+                n’hésitez pas à nous contacter. Nous vous répondrons
+                dans les plus brefs délais.
+            </p>
+
+            <a href="contact.html" class="faq-help-button">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <span>Nous contacter</span>
+            </a>
+        </div>
+
+        <div class="faq-help-illustration">
+            <img
+                src="../assets/images/faq/faq-help.png"
+                alt=""
+                aria-hidden="true"
+            >
+        </div>
+
+    </div>
+</section>
 </main>
 
 
@@ -532,7 +636,7 @@
 
 <!-- JS spécifique au Header -->
 <script src="../js/header.js" defer></script>
-
+<script src="../js/faq.js" defer></script>
 
 </body>
 

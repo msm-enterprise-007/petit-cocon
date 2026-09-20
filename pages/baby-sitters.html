@@ -63,7 +63,7 @@
 <!-- Responsive -->
 <link rel="stylesheet" href="../css/responsive.css">
 
-<link rel="stylesheet" href="../css/coming-soon.css">
+<link rel="stylesheet" href="../css/babysitter.css">
 
 <link rel="stylesheet" href="../css/register-modal.css">
     
@@ -316,16 +316,129 @@
 
 <main class="coming-soon">
 
-    <div class="coming-soon-content">
+    <section class="babysitters-intro" aria-labelledby="babysitters-title">
+    <div class="babysitters-intro-content">
 
-        <h1>Les prochaines pages arriveront bientôt</h1>
+        <div class="babysitters-location">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span>Île-de-France</span>
+        </div>
+
+        <h1 id="babysitters-title">
+            Nos baby-sitters<br>
+            de confiance
+        </h1>
 
         <p>
-            Cette page est actuellement en préparation.
-            Elle sera bientôt disponible.
+            Trouvez la personne idéale pour veiller
+            sur vos enfants en toute sérénité.
         </p>
 
     </div>
+</section>
+
+<section class="babysitters-search-section" aria-label="Rechercher un baby-sitter">
+    <div class="babysitters-search-card">
+
+        <div class="babysitters-search-field">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input
+                type="search"
+                name="search"
+                placeholder="Rechercher par nom, compétence, activité..."
+                aria-label="Rechercher un baby-sitter"
+            >
+        </div>
+
+        <div class="babysitters-location-field">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+
+            <select name="location" aria-label="Choisir une localisation">
+                <option value="ile-de-france">Île-de-France</option>
+            </select>
+
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </div>
+
+        <button type="submit" class="babysitters-search-button">
+            <span>Rechercher</span>
+        </button>
+
+    </div>
+</section>
+
+<section class="babysitters-results-toolbar" aria-label="Options de recherche">
+
+    <div class="babysitters-results-count">
+        <strong>24</strong>
+        <span>baby-sitters trouvées</span>
+    </div>
+
+    <div class="babysitters-results-actions">
+
+        <button
+            type="button"
+            class="babysitters-filter-button"
+            aria-label="Ouvrir les filtres"
+        >
+            <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+            <span>Filtres</span>
+        </button>
+
+        <button
+            type="button"
+            class="babysitters-sort-button"
+            aria-label="Trier les résultats"
+        >
+            <span>Trier par</span>
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </button>
+
+    </div>
+
+</section>
+
+<section class="babysitters-list-section" aria-labelledby="babysitters-list-title">
+
+    <h2 id="babysitters-list-title" class="visually-hidden">
+        Liste des baby-sitters.
+    </h2>
+
+    <div class="babysitters-carousel">
+
+        <button
+            type="button"
+            class="babysitters-carousel-arrow babysitters-carousel-prev"
+            aria-label="Baby-sitter précédente"
+        >
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+
+        <div class="babysitters-carousel-viewport">
+
+            <div class="babysitters-carousel-track">
+
+                <!-- Les cartes seront générées par JavaScript -->
+
+            </div>
+
+        </div>
+
+        <button
+            type="button"
+            class="babysitters-carousel-arrow babysitters-carousel-next"
+            aria-label="Baby-sitter suivante"
+        >
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
+
+    </div>
+
+    <div class="babysitters-carousel-dots" aria-label="Navigation des baby-sitters">
+        <!-- Les indicateurs seront générés par JavaScript -->
+    </div>
+
+</section>
 
 </main>
 
@@ -533,7 +646,7 @@
 
 <!-- JS spécifique au Header -->
 <script src="../js/header.js" defer></script>
-
+<script src="../js/babysitters.js" defer></script>
 
 </body>
 

@@ -1,266 +1,550 @@
-/* ==========================================
-   ESPACE BABY-SITTER
-========================================== */
-
-.babysitter-section {
+.babysitters-intro {
     width: 100%;
-
-    padding: 20px 18px;
-
+    padding: 28px 18px 20px;
+    background-color: #fef6e3;
 }
 
-.babysitter-container {
+.babysitters-intro-content {
     position: relative;
     width: 100%;
-    max-width: 760px;
-    min-height: 230px;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 16px;
-
-    background-image: url("../assets/images/baby-sitters/babysitter-home.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right center;
 }
 
-/* ==========================================
-   CONTENU
-========================================== */
-
-.babysitter-content {
-    position: relative;
-
-    z-index: 2;
-
-    width: 58%;
-
-    padding: 24px 0 24px 28px;
-}
-
-.babysitter-title {
-    margin: 0 0 4px;
-
-    color: #35271d;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 20px;
-    line-height: 1.2;
-}
-
-.babysitter-content h2 {
-    margin: 0 0 10px;
-
-    color: #35271d;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 22px;
-
-    line-height: 1.15;
-
-    font-weight: 400;
-}
-
-.babysitter-content h2 span {
-    display: block;
-
-    color: var(--primary);
-}
-
-.babysitter-description {
-    max-width: 280px;
-
-    margin: 0 0 16px;
-
-    color: var(--text);
-
-    font-size: 10px;
-
-    line-height: 1.5;
-}
-
-
-/* ==========================================
-   BOUTON
-========================================== */
-
-.babysitter-btn {
-    min-height: 38px;
-
+.babysitters-location {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-
     gap: 8px;
-
-    padding: 0 15px;
-
-    border-radius: 5px;
-
-    background-color: #35271d;
-    color: var(--white);
-
-    font-size: 10px;
-    font-weight: 600;
-
-    text-decoration: none;
+    margin-bottom: 18px;
+    padding: 9px 13px;
+    border-radius: 20px;
+    background-color: var(--white);
+    color: var(--text);
+    font-size: 11px;
+    font-weight: 700;
+    box-shadow: 0 3px 12px rgba(44, 41, 38, 0.06);
 }
 
-.babysitter-btn i {
+.babysitters-location i {
+    color: var(--primary);
+    font-size: 14px;
+}
+
+.babysitters-intro h1 {
+    max-width: 340px;
+    margin: 0;
+    color: #35271d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    line-height: 1.08;
+    font-weight: 700;
+}
+
+.babysitters-intro p {
+    max-width: 340px;
+    margin: 12px 0 0;
+    color: var(--text-light);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.babysitters-search-section {
+    width: 100%;
+    padding: 4px 18px 22px;
+    background-color: #fef6e3;
+}
+
+.babysitters-search-card {
+    width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: var(--white);
+    box-shadow: 0 4px 18px rgba(44, 41, 38, 0.06);
+}
+
+.babysitters-search-field,
+.babysitters-location-field {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #e3ddd4;
+    border-radius: 8px;
+    background-color: var(--white);
+}
+
+.babysitters-search-field {
+    margin-bottom: 10px;
+}
+
+.babysitters-search-field > i,
+.babysitters-location-field > i:first-child {
+    flex-shrink: 0;
+    margin-left: 14px;
+    color: var(--text);
+    font-size: 15px;
+}
+
+.babysitters-search-field input {
+    width: 100%;
+    height: 100%;
+    padding: 0 12px;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: var(--text);
     font-size: 12px;
 }
 
+.babysitters-search-field input::placeholder {
+    color: var(--text-light);
+}
 
-/* ==========================================
-   MOBILE
-========================================== */
+.babysitters-location-field {
+    margin-bottom: 10px;
+}
 
-@media (max-width: 480px) {
+.babysitters-location-field select {
+    width: 100%;
+    height: 100%;
+    padding: 0 34px 0 10px;
+    border: 0;
+    outline: none;
+    appearance: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 12px;
+    cursor: pointer;
+}
 
-    .babysitter-section {
-        padding: 18px;
-    }
+.babysitters-location-field > i:last-child {
+    position: absolute;
+    right: 14px;
+    color: var(--primary);
+    font-size: 11px;
+    pointer-events: none;
+}
 
-    .babysitter-container {
-        min-height: 220px;
+.babysitters-search-button {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 8px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
 
-        border-radius: 15px;
+.babysitters-search-button:hover {
+    background-color: var(--primary-dark);
+}
 
-        background-size: cover;
+.babysitters-results-toolbar {
+    width: 100%;
+    padding: 4px 18px 16px;
+    background-color: #fef6e3;
+}
 
-        background-position: 55% center; /* background-position: 1% center; :Cela permet de choisir quelle partie de l'image reste visible sans jamais la déformer.*/
-        
-        background-repeat: no-repeat;
-    }
+.babysitters-results-count {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    margin-bottom: 12px;
+    color: var(--text-light);
+    font-size: 12px;
+}
 
-    .babysitter-content {
-        width: 59%;
+.babysitters-results-count strong {
+    color: var(--text);
+    font-size: 17px;
+}
 
-        padding: 22px 0 20px 20px;
-    }
+.babysitters-results-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
 
-    .babysitter-title {
-        font-size: 18px;
-    }
+.babysitters-filter-button,
+.babysitters-sort-button {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 14px;
+    border: 1px solid #ddd4c8;
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--text);
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+}
 
-    .babysitter-content h2 {
-        font-size: 19px;
-    }
+.babysitters-filter-button {
+    flex: 1;
+}
 
-    .babysitter-description {
-        max-width: 205px;
+.babysitters-sort-button {
+    flex: 1;
+}
 
-        font-size: 9px;
-    }
+.babysitters-filter-button i {
+    color: var(--primary);
+    font-size: 13px;
+}
 
-    .babysitter-btn {
-        min-height: 35px;
+.babysitters-sort-button i {
+    margin-left: 3px;
+    color: var(--primary);
+    font-size: 10px;
+}
 
-        padding-inline: 12px;
+.babysitters-list-section {
+    width: 100%;
+    padding: 4px 24px 30px;
+    background-color: #fef6e3;
+}
 
-        font-size: 9px;
-    }
+.babysitters-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
-    /* .babysitter-visual {
-        width: 52%;
-    } */
-
-    /* .babysitter-visual img {
-         object-fit: cover; 
-         object-position: 80% center;
-    } */
+.babysitter-card {
+    width: 100%;
+    min-height: 245px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    overflow: hidden;
+    border: 1px solid #e5ddd2;
+    border-radius: 16px;
+    background-color: var(--white);
+    box-shadow: 0 4px 16px rgba(44, 41, 38, 0.05);
 }
 
 
-/* ==========================================
-   DESKTOP — BABY-SITTER + TÉMOIGNAGES
-========================================== */
+/* ========================================
+   PARTIE GAUCHE — PHOTO — 40 %
+======================================== */
 
-@media (min-width: 1051px) {
+.babysitter-card-photo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 245px;
+    overflow: hidden;
+}
 
-    .babysitter-section {
-        padding: 30px 24px;
-    }
+.babysitter-card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    .babysitter-container {
-        max-width: 1240px;
-        min-height: 310px;
+.babysitter-availability {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 8px;
+    border-radius: 20px;
+    background-color: var(--white);
+    color: #3f6f46;
+    font-size: 8px;
+    font-weight: 700;
+}
 
-        display: grid;
-        grid-template-columns: 47% 53%;
-
-        margin: 0 auto;
-
-        background-color: #f8eee1;
-        border-radius: 16px;
-    }
-
-
-    /* ------------------------------------------
-       BLOC BABY-SITTER
-    ------------------------------------------ */
-
-    .babysitter-content {
-        width: 100%;
-
-        padding: 30px 0 30px 32px;
-
-        align-self: center;
-    }
-
-    .babysitter-title {
-        margin-bottom: 5px;
-
-        font-size: 28px;
-    }
-
-    .babysitter-content h2 {
-        margin-bottom: 14px;
-
-        font-size: 28px;
-        line-height: 1.1;
-    }
-
-    .babysitter-description {
-        max-width: 400px;
-
-        margin-bottom: 22px;
-
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    .babysitter-btn {
-        min-height: 48px;
-
-        padding-inline: 20px;
-
-        font-size: 14px;
-    }
-
-    .babysitter-btn i {
-        font-size: 15px;
-    }
+.babysitter-availability span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #5c9b65;
+}
 
 
-    /* ------------------------------------------
-       VISUEL
-    ------------------------------------------ */
+/* ========================================
+   PARTIE DROITE — CONTENU — 60 %
+======================================== */
 
-    /* .babysitter-visual {
-        position: relative;
+.babysitter-card-content {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 12px;
+}
 
-        width: 100%;
-        height: 100%;
-    }
 
-    .babysitter-visual img {
-        width: 100%;
-        height: 100%;
+/* Nom + note */
 
-        object-fit: cover;
-        object-position: center;
-    } */
+.babysitter-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 6px;
+}
+
+.babysitter-card-header h3 {
+    margin: 0 0 4px;
+    color: var(--text);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.babysitter-verified {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--primary);
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.babysitter-verified i {
+    font-size: 9px;
+}
+
+.babysitter-rating {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 7px;
+    border-radius: 6px;
+    background-color: #fef6e3;
+    color: var(--text);
+    font-size: 9px;
+}
+
+.babysitter-rating i {
+    color: var(--primary);
+    font-size: 9px;
+}
+
+
+/* Expérience + diplôme */
+
+.babysitter-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 11px;
+}
+
+.babysitter-card-info span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-light);
+    font-size: 8px;
+    line-height: 1.3;
+}
+
+.babysitter-card-info i {
+    width: 12px;
+    flex-shrink: 0;
+    color: var(--primary);
+    text-align: center;
+}
+
+
+/* Description */
+
+.babysitter-card-description {
+    margin: 11px 0 9px;
+    color: var(--text-light);
+    font-size: 9px;
+    line-height: 1.45;
+}
+
+
+/* Compétences */
+
+.babysitter-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.babysitter-skills span {
+    padding: 5px 7px;
+    border-radius: 5px;
+    background-color: #f7f0e5;
+    color: var(--text);
+    font-size: 7px;
+    font-weight: 600;
+}
+
+
+/* Prix + disponibilité */
+
+.babysitter-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: 9px;
+}
+
+.babysitter-price {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+.babysitter-price strong {
+    color: var(--primary);
+    font-size: 17px;
+}
+
+.babysitter-price span {
+    color: var(--text-light);
+    font-size: 8px;
+}
+
+.babysitter-availability-text {
+    color: #4c7753;
+    font-size: 7px;
+    font-weight: 600;
+    text-align: right;
+}
+
+
+/* Actions */
+
+.babysitter-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.babysitter-phone {
+    width: 36px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid #ddd4c8;
+    border-radius: 6px;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.babysitter-profile-button {
+    flex: 1;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border-radius: 6px;
+    background-color: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.babysitter-profile-button i {
+    font-size: 8px;
+}
+/* ========================================
+   CARROUSEL BABY-SITTERS
+======================================== */
+
+.babysitters-carousel {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.babysitters-carousel-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.babysitters-carousel-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.35s ease;
+}
+
+.babysitters-carousel-track .babysitter-card {
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.babysitters-carousel-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #ddd4c8;
+    border-radius: 50%;
+
+    background-color: var(--white);
+    color: var(--primary);
+
+    cursor: pointer;
+
+    transform: translateY(-50%);
+    box-shadow: 0 3px 10px rgba(44, 41, 38, 0.08);
+}
+
+.babysitters-carousel-prev {
+    left: -10px;
+}
+
+.babysitters-carousel-next {
+    right: -10px;
+}
+
+.babysitters-carousel-arrow i {
+    font-size: 11px;
+}
+
+.babysitters-carousel-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 14px;
+}
+
+.babysitters-carousel-dot {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background-color: #d8cfc3;
+    cursor: pointer;
+}
+
+.babysitters-carousel-dot.is-active {
+    width: 18px;
+    border-radius: 10px;
+    background-color: var(--primary);
 }
