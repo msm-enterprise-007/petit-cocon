@@ -562,13 +562,13 @@
 .babysitter-join-card {
     position: relative;
     width: 100%;
-    min-height: 330px;
+    min-height: 200px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 28px 20px;
+    padding: 24px 18px;
     overflow: hidden;
 
     border: 1px solid #eadfcf;
@@ -577,7 +577,7 @@
     background-color: #fffaf0;
     background-image: url("../assets/images/baby-sitters/babysitter-join.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
 }
 
@@ -604,7 +604,6 @@
 
 .babysitter-join-content p {
     max-width: 300px;
-
     margin: 12px auto 20px;
 
     color: var(--text-light);
@@ -629,7 +628,6 @@
     border-radius: 8px;
 
     background-color: rgba(255, 255, 255, 0.72);
-
     color: var(--primary);
 
     text-decoration: none;
