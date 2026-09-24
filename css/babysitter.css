@@ -548,3 +548,105 @@
     border-radius: 10px;
     background-color: var(--primary);
 }
+
+/* ========================================
+   DEVENIR BABY-SITTER
+======================================== */
+
+.babysitter-join-section {
+    width: 100%;
+    padding: 10px 18px 30px;
+    background-color: #fef6e3;
+}
+
+.babysitter-join-card {
+    position: relative;
+    width: 100%;
+    min-height: 330px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 28px 20px;
+    overflow: hidden;
+
+    border: 1px solid #eadfcf;
+    border-radius: 18px;
+
+    background-color: #fffaf0;
+    background-image: url("../assets/images/baby-sitters/babysitter-join.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.babysitter-join-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 320px;
+
+    text-align: center;
+}
+
+.babysitter-join-content h2 {
+    margin: 0;
+
+    color: #35271d;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+.babysitter-join-content p {
+    max-width: 300px;
+
+    margin: 12px auto 20px;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.babysitter-join-button {
+    width: 100%;
+    max-width: 250px;
+    min-height: 48px;
+
+    margin-inline: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+
+    background-color: rgba(255, 255, 255, 0.72);
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        background-color var(--transition),
+        color var(--transition);
+}
+
+.babysitter-join-button i {
+    font-size: 16px;
+}
+
+.babysitter-join-button:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
