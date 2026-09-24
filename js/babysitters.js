@@ -243,3 +243,28 @@ nextButton?.addEventListener("click", showNext);
 renderBabysitters();
 renderDots();
 updateCarousel();
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+const swipeThreshold = 50;
+
+carouselTrack?.addEventListener("touchstart", (event) => {
+    touchStartX = event.changedTouches[0].screenX;
+});
+
+carouselTrack?.addEventListener("touchend", (event) => {
+    touchEndX = event.changedTouches[0].screenX;
+
+    const swipeDistance = touchEndX - touchStartX;
+
+    if (Math.abs(swipeDistance) < swipeThreshold) {
+        return;
+    }
+
+    if (swipeDistance < 0) {
+        showNext();
+    } else {
+        showPrevious();
+    }
+});
