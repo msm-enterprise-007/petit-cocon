@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mon espace — Petit Cocon</title>
+
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/babysitter-dashboard.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+<header class="site-header">
+    <!-- Ton header global existant -->
+      <div class="container header-container">
+        <a href="../index.html" class="logo" aria-label="Petit Cocon - Accueil">
+            <picture>
+                <source media="(max-width: 800px)" srcset="../assets/images/logo-mobile.png">
+                <img src="../assets/images/logo.png" alt="Petit Cocon">
+            </picture>
+        </a>
+
+        <nav class="main-nav" id="main-menu" aria-label="Navigation principale">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="baby-sitters.html">Baby-sitters</a></li>
+                <li><a href="faq.html">Comment ça marche</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <a href="babysitter-dashboard.html" class="btn-login active">
+                <i class="fa-regular fa-user"></i>
+                <span>Mon espace</span>
+            </a>
+            <button type="button" class="btn-register" id="logout-desktop">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Déconnexion</span>
+            </button>
+        </div>
+
+        <button type="button" class="menu-toggle" id="menu-toggle"
+                aria-label="Ouvrir le menu" aria-controls="main-menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+
+<main class="babysitter-dashboard">
+
+    <section class="dashboard-hero">
+        <div class="container">
+            <div class="dashboard-welcome">
+                <div>
+                    <span class="dashboard-eyebrow">Mon espace baby-sitter</span>
+
+                    <h1>
+                        Bonjour <span id="babysitter-name">Claire</span>
+                    </h1>
+
+                    <p>
+                        Gérez votre profil, vos disponibilités et vos échanges
+                        avec les familles.
+                    </p>
+                </div>
+
+                <div class="profile-status">
+                    <span class="status-dot"></span>
+                    Profil visible
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="dashboard-content">
+        <div class="container">
+
+            <!-- Navigation dashboard -->
+            <nav class="dashboard-nav" aria-label="Navigation de mon espace">
+
+                <button
+                    type="button"
+                    class="dashboard-nav-item active"
+                    data-view="overview"
+                >
+                    <i class="fa-solid fa-house"></i>
+                    <span>Accueil</span>
+                </button>
+
+                <button
+                    type="button"
+                    class="dashboard-nav-item"
+                    data-view="messages"
+                >
+                    <i class="fa-regular fa-comments"></i>
+                    <span>Messages</span>
+                    <strong class="nav-badge">2</strong>
+                </button>
+
+                <button
+                    type="button"
+                    class="dashboard-nav-item"
+                    data-view="profile"
+                >
+                    <i class="fa-regular fa-user"></i>
+                    <span>Mon profil</span>
+                </button>
+
+                <button
+                    type="button"
+                    class="dashboard-nav-item"
+                    data-view="availability"
+                >
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>Disponibilités</span>
+                </button>
+
+            </nav>
+
+
+            <!-- =========================
+                 VUE ACCUEIL
+            ========================== -->
+
+            <div class="dashboard-view active" id="overview-view">
+
+                <div class="dashboard-grid">
+
+                    <article class="dashboard-card profile-summary">
+
+                        <div class="card-heading">
+                            <div>
+                                <span class="card-label">Mon profil</span>
+                                <h2>Votre profil baby-sitter</h2>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="text-button"
+                                data-view="profile"
+                            >
+                                Modifier
+                            </button>
+                        </div>
+
+                        <div class="profile-summary-content">
+
+                            <div class="profile-avatar">
+                                <span>CM</span>
+                            </div>
+
+                            <div class="profile-summary-info">
+                                <h3>Claire Martin</h3>
+
+                                <p>
+                                    Baby-sitter à Montrouge
+                                </p>
+
+                                <div class="profile-meta">
+                                    <span>
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        Montrouge
+                                    </span>
+
+                                    <span>
+                                        <i class="fa-solid fa-euro-sign"></i>
+                                        14 €/h
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="dashboard-card">
+
+                        <div class="card-heading">
+                            <div>
+                                <span class="card-label">Messages</span>
+                                <h2>Vos échanges</h2>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="text-button"
+                                data-view="messages"
+                            >
+                                Voir tout
+                            </button>
+                        </div>
+
+                        <div class="message-preview">
+
+                            <button
+                                type="button"
+                                class="message-preview-item"
+                                data-conversation="sophie"
+                            >
+                                <span class="conversation-avatar">SM</span>
+
+                                <span class="conversation-content">
+                                    <strong>Sophie Martin</strong>
+                                    <small>
+                                        Bonjour Claire, seriez-vous disponible...
+                                    </small>
+                                </span>
+
+                                <span class="unread-dot"></span>
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="message-preview-item"
+                                data-conversation="julie"
+                            >
+                                <span class="conversation-avatar">JD</span>
+
+                                <span class="conversation-content">
+                                    <strong>Julie Dupont</strong>
+                                    <small>
+                                        Merci pour votre réponse !
+                                    </small>
+                                </span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="dashboard-card availability-summary">
+
+                        <div class="card-heading">
+                            <div>
+                                <span class="card-label">Disponibilités</span>
+                                <h2>Votre planning</h2>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="text-button"
+                                data-view="availability"
+                            >
+                                Modifier
+                            </button>
+                        </div>
+
+                        <div class="availability-list">
+
+                            <div class="availability-row">
+                                <span>Lundi</span>
+                                <strong>18h00 – 21h00</strong>
+                            </div>
+
+                            <div class="availability-row">
+                                <span>Mercredi</span>
+                                <strong>14h00 – 20h00</strong>
+                            </div>
+
+                            <div class="availability-row">
+                                <span>Vendredi</span>
+                                <strong>17h30 – 21h00</strong>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="dashboard-card requests-summary">
+
+                        <div class="card-heading">
+                            <div>
+                                <span class="card-label">Demandes</span>
+                                <h2>Dernières demandes</h2>
+                            </div>
+                        </div>
+
+                        <div class="request-list">
+
+                            <div class="request-item">
+                                <div>
+                                    <strong>Sophie Martin</strong>
+                                    <span>
+                                        18 octobre · 18h00 – 21h00
+                                    </span>
+                                </div>
+
+                                <span class="request-status pending">
+                                    À traiter
+                                </span>
+                            </div>
+
+
+                            <div class="request-item">
+                                <div>
+                                    <strong>Julie Dupont</strong>
+                                    <span>
+                                        22 octobre · 17h30 – 20h30
+                                    </span>
+                                </div>
+
+                                <span class="request-status accepted">
+                                    Confirmée
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 VUE MESSAGES
+            ========================== -->
+
+            <div class="dashboard-view" id="messages-view">
+
+                <div class="dashboard-section-header">
+                    <button
+                        type="button"
+                        class="back-button"
+                        data-view="overview"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Retour
+                    </button>
+
+                    <span class="dashboard-eyebrow">Messages</span>
+
+                    <h2>Mes conversations</h2>
+
+                    <p>
+                        Retrouvez ici les échanges avec les parents.
+                    </p>
+                </div>
+
+
+                <div class="conversation-list">
+
+                    <button
+                        type="button"
+                        class="conversation-item"
+                        data-conversation="sophie"
+                    >
+                        <span class="conversation-avatar">SM</span>
+
+                        <span class="conversation-main">
+                            <strong>Sophie Martin</strong>
+                            <small>
+                                Bonjour Claire, seriez-vous disponible le 18 octobre ?
+                            </small>
+                        </span>
+
+                        <span class="conversation-date">Aujourd'hui</span>
+                        <span class="unread-dot"></span>
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="conversation-item"
+                        data-conversation="julie"
+                    >
+                        <span class="conversation-avatar">JD</span>
+
+                        <span class="conversation-main">
+                            <strong>Julie Dupont</strong>
+                            <small>
+                                Merci pour votre réponse !
+                            </small>
+                        </span>
+
+                        <span class="conversation-date">Hier</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 VUE CONVERSATION
+            ========================== -->
+
+            <div class="dashboard-view" id="conversation-view">
+
+                <div class="conversation-header">
+
+                    <button
+                        type="button"
+                        class="back-button"
+                        data-view="messages"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Messages
+                    </button>
+
+                    <div class="conversation-person">
+                        <span class="conversation-avatar">SM</span>
+
+                        <div>
+                            <strong id="conversation-name">
+                                Sophie Martin
+                            </strong>
+
+                            <small>Parent</small>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="messages-container"
+                    id="messages-container"
+                ></div>
+
+
+                <form
+                    class="message-form"
+                    id="message-form"
+                >
+                    <input
+                        type="text"
+                        id="message-input"
+                        placeholder="Écrire un message..."
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" aria-label="Envoyer">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+
+            </div>
+
+
+            <!-- =========================
+                 VUE PROFIL
+            ========================== -->
+
+            <div class="dashboard-view" id="profile-view">
+
+                <div class="dashboard-section-header">
+
+                    <button
+                        type="button"
+                        class="back-button"
+                        data-view="overview"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Retour
+                    </button>
+
+                    <span class="dashboard-eyebrow">Mon profil</span>
+
+                    <h2>Mon profil baby-sitter</h2>
+
+                    <p>
+                        Les informations visibles par les parents.
+                    </p>
+
+                </div>
+
+
+                <form
+                    class="dashboard-form"
+                    id="profile-form"
+                >
+
+                    <div class="profile-edit-top">
+
+                        <div class="profile-avatar large">
+                            <span>CM</span>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="secondary-button"
+                        >
+                            Modifier la photo
+                        </button>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-field">
+                            <label for="firstname">
+                                Prénom
+                            </label>
+
+                            <input
+                                type="text"
+                                id="firstname"
+                                value="Claire"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-field">
+                            <label for="lastname">
+                                Nom
+                            </label>
+
+                            <input
+                                type="text"
+                                id="lastname"
+                                value="Martin"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-field">
+                            <label for="email">
+                                Adresse e-mail
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                value="claire.martin@email.com"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-field">
+                            <label for="phone">
+                                Téléphone
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                value="06 00 00 00 00"
+                            >
+                        </div>
+
+
+                        <div class="form-field">
+                            <label for="city">
+                                Ville / quartier
+                            </label>
+
+                            <select id="city">
+                                <option selected>Montrouge</option>
+                                <option>Malakoff</option>
+                                <option>Châtillon</option>
+                                <option>Porte d'Orléans</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-field">
+                            <label for="rate">
+                                Tarif horaire
+                            </label>
+
+                            <input
+                                type="number"
+                                id="rate"
+                                value="14"
+                                min="0"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-field full">
+                        <label for="presentation">
+                            Présentation
+                        </label>
+
+                        <textarea
+                            id="presentation"
+                            rows="6"
+                        >Je suis Claire, baby-sitter à Montrouge. J'aime accompagner les enfants dans un cadre calme, bienveillant et sécurisé.</textarea>
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            class="primary-button"
+                        >
+                            Enregistrer les modifications
+                        </button>
+
+                    </div>
+
+                    <p
+                        class="form-success"
+                        id="profile-success"
+                        hidden
+                    >
+                        Vos modifications ont bien été enregistrées.
+                    </p>
+
+                </form>
+
+            </div>
+
+
+            <!-- =========================
+                 VUE DISPONIBILITÉS
+            ========================== -->
+
+            <div class="dashboard-view" id="availability-view">
+
+                <div class="dashboard-section-header">
+
+                    <button
+                        type="button"
+                        class="back-button"
+                        data-view="overview"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Retour
+                    </button>
+
+                    <span class="dashboard-eyebrow">
+                        Disponibilités
+                    </span>
+
+                    <h2>Mon planning</h2>
+
+                    <p>
+                        Indiquez aux parents les moments où vous êtes disponible.
+                    </p>
+
+                </div>
+
+
+                <form
+                    class="availability-form"
+                    id="availability-form"
+                >
+
+                    <div class="availability-edit-row">
+                        <label>
+                            <input type="checkbox" checked>
+                            <span>Lundi</span>
+                        </label>
+
+                        <input type="time" value="18:00">
+                        <span>à</span>
+                        <input type="time" value="21:00">
+                    </div>
+
+
+                    <div class="availability-edit-row">
+                        <label>
+                            <input type="checkbox">
+                            <span>Mardi</span>
+                        </label>
+
+                        <input type="time" value="18:00">
+                        <span>à</span>
+                        <input type="time" value="21:00">
+                    </div>
+
+
+                    <div class="availability-edit-row">
+                        <label>
+                            <input type="checkbox" checked>
+                            <span>Mercredi</span>
+                        </label>
+
+                        <input type="time" value="14:00">
+                        <span>à</span>
+                        <input type="time" value="20:00">
+                    </div>
+
+
+                    <div class="availability-edit-row">
+                        <label>
+                            <input type="checkbox">
+                            <span>Jeudi</span>
+                        </label>
+
+                        <input type="time" value="18:00">
+                        <span>à</span>
+                        <input type="time" value="21:00">
+                    </div>
+
+
+                    <div class="availability-edit-row">
+                        <label>
+                            <input type="checkbox" checked>
+                            <span>Vendredi</span>
+                        </label>
+
+                        <input type="time" value="17:30">
+                        <span>à</span>
+                        <input type="time" value="21:00">
+                    </div>
+
+
+                    <div class="availability-edit-row">
+                        <label>
+                            <input type="checkbox">
+                            <span>Samedi</span>
+                        </label>
+
+                        <input type="time" value="10:00">
+                        <span>à</span>
+                        <input type="time" value="18:00">
+                    </div>
+
+
+                    <div class="availability-edit-row">
+                        <label>
+                            <input type="checkbox">
+                            <span>Dimanche</span>
+                        </label>
+
+                        <input type="time" value="10:00">
+                        <span>à</span>
+                        <input type="time" value="18:00">
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        Enregistrer mes disponibilités
+                    </button>
+
+                    <p
+                        class="form-success"
+                        id="availability-success"
+                        hidden
+                    >
+                        Vos disponibilités ont bien été enregistrées.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+    <!-- Ton footer global existant -->
+      <div class="footer-container">
+
+
+        <!-- Logo complet -->
+        <div class="footer-brand">
+
+            <img
+                src="../assets/images/logo.png"
+                alt="Petit Cocon"
+                class="footer-logo"
+            >
+
+            <div class="footer-socials">
+
+                <a
+                    href="#"
+                    aria-label="Facebook"
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a
+                    href="#"
+                    aria-label="Instagram"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a
+                    href="mailto:contact@petitcocon.fr"
+                    aria-label="Nous contacter par email"
+                >
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <div class="footer-column">
+
+            <h2>Navigation</h2>
+
+            <ul>
+
+                <li>
+                    <a href="../index.html">
+                        Accueil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="baby-sitters.html">
+                        Baby-sitters
+                    </a>
+                </li>
+
+                <li>
+                    <a href="faq.html">
+                        Comment ça marche
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Parents -->
+        <div class="footer-column">
+
+            <h2>Pour les parents</h2>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        Comment réserver ?
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Sécurité & confiance
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Avis des parents
+                    </a>
+                </li>
+
+                <li>
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Baby-sitters -->
+        <div class="footer-column">
+
+            <h2>Pour les baby-sitters</h2>
+
+            <ul>
+
+                <li>
+                    <a href="inscription.html">
+                        Devenir baby-sitter
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Ressources
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Conseils
+                    </a>
+                </li>
+
+                <li>
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Légal -->
+        <div class="footer-column">
+
+            <h2>Légal</h2>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        Mentions légales
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Conditions générales
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Politique de confidentialité
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Petit Cocon. Tous droits réservés.
+        </p>
+
+    </div>
+</footer>
+
+
+<script src="../js/header.js"></script>
+<script src="../js/babysitter-dashboard.js"></script>
+
+</body>
+</html>
