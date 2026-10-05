@@ -162,15 +162,6 @@
 
         font-size: 9px;
     }
-
-    /* .babysitter-visual {
-        width: 52%;
-    } */
-
-    /* .babysitter-visual img {
-         object-fit: cover; 
-         object-position: 80% center;
-    } */
 }
 
 
@@ -243,24 +234,4 @@
     .babysitter-btn i {
         font-size: 15px;
     }
-
-
-    /* ------------------------------------------
-       VISUEL
-    ------------------------------------------ */
-
-    /* .babysitter-visual {
-        position: relative;
-
-        width: 100%;
-        height: 100%;
-    }
-
-    .babysitter-visual img {
-        width: 100%;
-        height: 100%;
-
-        object-fit: cover;
-        object-position: center;
-    } */
 }

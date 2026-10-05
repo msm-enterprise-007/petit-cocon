@@ -4,15 +4,15 @@
 ======================================== */
 
 .babysitter-register-intro {
-    position: relative;
+    /* position: relative; */
     width: 100%;
-    min-height: 265px;
+    /* min-height: 265px; */
     /* background-color: #fef6e3; */
-    background-image: url("../assets/images/baby-sitters/inscription-babysitter-intro-bg.png");
-    background-repeat: no-repeat;
+    /* background-image: url("../assets/images/baby-sitters/inscription-babysitter-intro-bg.png");
+    background-repeat: no-repeat; */
     /* background-size: auto 190px; */
-     background-size: cover;
-    background-position: right top;
+     /* background-size: cover;
+    background-position: right top; */
 }
 
 .babysitter-register-intro-content {
@@ -55,6 +55,94 @@
     line-height: 1.55;
 }
 
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 800px) {
+    .babysitter-register-intro {
+        position: relative;
+
+        background-color: #FEF6E3;
+
+        /* Ton image de background */
+        background-image: url("../assets/images/baby-sitters/babysitter-home.png");
+        background-repeat: no-repeat;
+
+        /* On garde l'image entière en hauteur */
+        background-size: auto 430px;
+        /* background-position: right top; */
+        background-position: 60% 30%;
+    }
+
+    /* Voile pour rendre le texte lisible */
+    .babysitter-register-intro::before {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(254, 246, 227, 0.98) 0%,
+                rgba(254, 246, 227, 0.88) 35%,
+                rgba(254, 246, 227, 0.35) 65%,
+                rgba(254, 246, 227, 0) 100%
+            );
+
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .babysitter-register-intro-content {
+        position: relative;
+        z-index: 2;
+    
+        width: 62%;
+        padding: 32px 0 20px 18px;
+    }
+    
+    .babysitter-register-intro-label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    
+        margin-bottom: 14px;
+    
+        color: var(--primary);
+        font-size: 16px;
+        font-weight: 700;
+    }
+    
+    .babysitter-register-intro-label i {
+        font-size: 17px;
+    }
+    
+    .babysitter-register-intro h1 {
+        /* max-width: 300px; */
+        margin-bottom: 16px;
+    
+        color: #35271d;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 30px;
+        line-height: 1.08;
+        font-weight: 700;
+    }
+    
+    .babysitter-register-intro h1 span {
+        color: var(--primary);
+    }
+    
+    .babysitter-register-intro p {
+        max-width: 210px;
+        margin: 18px 0 20px;
+    
+        color: var(--text);
+        font-size: 14 px;
+        line-height: 1.65;
+    }
+}
 /* ========================================
    INFORMATIONS PERSONNELLES — MOBILE
 ======================================== */
