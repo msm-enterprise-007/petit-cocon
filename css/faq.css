@@ -149,11 +149,11 @@
     }
     
     .faq-hero p {
-        max-width: 300px;
+        max-width: 210px;
         margin: 18px 0 20px;
     
-        color: var(--text-light);
-        font-size: 14px;
+        color: var(--text);
+        font-size: 14 px;
         line-height: 1.65;
     }
 }
