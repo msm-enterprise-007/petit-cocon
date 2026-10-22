@@ -268,3 +268,4 @@ carouselTrack?.addEventListener("touchend", (event) => {
         showPrevious();
     }
 });
+

@@ -1,4 +1,19 @@
 /* ==========================================
+   SÉCURITÉ MOBILE & TABLETTE (Par défaut)
+   ========================================== */
+
+/* On cache la colonne de droite partout par défaut */
+.connexion-benefits-card {
+    display: none;
+}
+
+/* Le wrapper se comporte comme une simple div invisible */
+.connexion-form-wrapper {
+    display: block;
+    width: 100%;
+}
+
+/* ==========================================
    INTRODUCTION CONNEXION
 ========================================== */
 
@@ -640,6 +655,251 @@
         max-width: 300px;
         font-size: 11px;
         line-height: 1.5;
+    }
+
+}
+
+/* ============================================================
+   TABLETTE — 801px à 1050px (Option C, étape 1 : centré)
+   ============================================================ */
+
+@media (min-width: 801px) and (max-width: 1050px) {
+
+    /* Intro : déjà stylée par toi — on n'y touche pas */
+
+    /* ---------- FORMULAIRE : carte centrée ---------- */
+    .connexion-form-section {
+        padding: 0 32px 24px;
+    }
+
+    .connexion-form-card {
+        max-width: 540px;
+        margin: 0 auto;
+        padding: 38px 34px 32px;
+        border-radius: 18px;
+    }
+
+    .connexion-form-heading h2 { font-size: 34px; }
+    .connexion-form-heading p  { font-size: 13px; margin-bottom: 28px; }
+
+    .connexion-field label { font-size: 14px; }
+
+    .connexion-input-wrapper input {
+        min-height: 54px;
+        font-size: 14px;
+    }
+
+    .connexion-submit {
+        min-height: 52px;
+        font-size: 15px;
+    }
+
+    /* ---------- AIDE : carte centrée ---------- */
+    .connexion-help {
+        padding: 0 32px 22px;
+    }
+
+    .connexion-help-content {
+        max-width: 540px;
+        margin: 0 auto;
+        padding: 20px 24px;
+        min-height: 120px;
+    }
+
+    .connexion-help-text h2 { font-size: 22px; }
+    .connexion-help-text p  { font-size: 12px; }
+
+    .connexion-help-button {
+        min-height: 44px;
+        padding: 0 16px;
+        font-size: 12px;
+    }
+
+    /* ---------- BABY-SITTER : carte centrée ---------- */
+    .connexion-babysitter {
+        padding: 0 32px 44px;
+    }
+
+    .connexion-babysitter-content {
+        max-width: 540px;
+        margin: 0 auto;
+        min-height: 220px;
+        padding: 30px 28px;
+    }
+
+    .connexion-babysitter h2 {
+        font-size: 28px;
+        max-width: 280px;
+    }
+
+    .connexion-babysitter-text {
+        max-width: 300px;
+        font-size: 12px;
+    }
+
+    .connexion-babysitter-button {
+        min-height: 42px;
+        padding: 0 18px;
+        font-size: 11px;
+    }
+}
+
+
+/* ==========================================
+   DESKTOP UNIQUEMENT (À partir de 1051px)
+   ========================================== */
+
+@media (min-width: 1051px) {
+
+    /* ---------- GRILLE PRINCIPALE (Le chef d'orchestre) ---------- */
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 colonnes égales */
+        column-gap: 32px;
+        row-gap: 36px;
+        padding: 0 0 80px;
+        background-color: #fef6e3;
+    }
+
+    /* ---------- LE HERO (Pleine largeur) ---------- */
+    .connexion-intro {
+        grid-column: 1 / -1; /* Prend toute la largeur */
+        min-height: 320px;
+        background-position: center right;
+    }
+    .connexion-intro-content {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 64px 48px 58px;
+    }
+    .connexion-intro h1 { font-size: 58px; line-height: 1.06; }
+    .connexion-intro-line { width: 90px; height: 3px; margin: 22px 0 24px; }
+    .connexion-intro p { max-width: 520px; font-size: 17px; }
+
+    /* ---------- LE FORMULAIRE (Pleine largeur, contenu centré) ---------- */
+    .connexion-form-section {
+        grid-column: 1 / -1;
+        padding: 0 32px;
+    }
+
+    /* On active le flex pour mettre les 2 cartes côte à côte */
+    .connexion-form-wrapper {
+        display: flex;
+        max-width: 1100px;
+        margin: 0 auto;
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(44, 41, 38, 0.08);
+        overflow: hidden;
+        background-color: #fffdf9;
+    }
+
+    /* -- Colonne Gauche : Le Formulaire -- */
+    .connexion-form-card {
+        flex: 1;
+        width: 50%;
+        margin: 0;
+        padding: 50px 55px;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: transparent; /* Le fond est géré par le wrapper */
+    }
+    .connexion-form-heading h2 { font-size: 36px; }
+    .connexion-input-wrapper input { min-height: 56px; font-size: 14.5px; }
+    .connexion-submit { min-height: 54px; font-size: 15px; }
+
+    /* -- Colonne Droite : Les Arguments -- */
+    .connexion-benefits-card {
+        display: block; /* On l'affiche ! */
+        flex: 1;
+        width: 50%;
+        padding: 55px 50px;
+        background-color: #f9f1e6; /* Fond beige plus soutenu */
+        border-left: 1px solid rgba(198, 139, 44, 0.1);
+    }
+
+    .benefits-title {
+        margin: 0 0 15px;
+        color: #35271d;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 32px;
+        line-height: 1.2;
+        font-weight: 400;
+    }
+    .benefits-title span { color: var(--primary); }
+    
+    .benefits-decoration {
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: var(--primary);
+        margin-bottom: 40px;
+        border-radius: 3px;
+    }
+
+    .benefits-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+    .benefits-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .benefit-icon {
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1.5px solid var(--primary);
+        border-radius: 50%;
+        color: var(--primary);
+    }
+    .benefit-icon i { font-size: 20px; }
+    .benefit-text h3 {
+        margin: 0 0 6px;
+        color: #35271d;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .benefit-text p {
+        margin: 0;
+        color: var(--text-light);
+        font-size: 13.5px;
+        line-height: 1.5;
+    }
+
+    /* ---------- LES 2 SECTIONS DU BAS (Côte à côte) ---------- */
+    /* "Besoin d'aide" prend la colonne de gauche */
+    .connexion-help {
+        grid-column: 1;
+        padding: 0 0 0 32px;
+        display: flex;
+        justify-content: flex-end; /* Aligne vers le centre */
+    }
+    .connexion-help-content {
+        width: 100%;
+        max-width: 540px;
+        border-radius: 16px;
+    }
+
+    /* "Espace baby-sitter" prend la colonne de droite */
+    .connexion-babysitter {
+        grid-column: 2;
+        padding: 0 32px 0 0;
+        display: flex;
+        justify-content: flex-start; /* Aligne vers le centre */
+    }
+    .connexion-babysitter-content {
+        width: 100%;
+        max-width: 540px;
+        border-radius: 16px;
+        padding: 30px 34px;
     }
 
 }

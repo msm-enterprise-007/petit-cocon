@@ -711,3 +711,605 @@
 
         font-size: 9px;
     }
+}
+
+/* ============================================================
+   TABLETTE — MIN-WIDTH: 768px
+   Carrousel → Grille 2 colonnes, cards verticales
+   ============================================================ */
+
+@media (min-width: 768px) {
+
+    /* ---------- SECTION LISTE ---------- */
+    .babysitters-list-section {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 8px 40px 40px;
+    }
+
+    /* ---------- On désactive le carrousel ---------- */
+    .babysitters-carousel {
+        display: block;
+        position: static;
+    }
+
+    .babysitters-carousel-viewport {
+        overflow: visible;
+    }
+
+    .babysitters-carousel-track {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+        width: 100%;
+        transform: none !important;
+        transition: none;
+    }
+
+    .babysitters-carousel-arrow,
+    .babysitters-carousel-dots {
+        display: none;
+    }
+
+    /* ---------- Card en layout vertical (photo haut, contenu bas) ---------- */
+    .babysitters-carousel-track .babysitter-card {
+        flex: unset;
+        width: 100%;
+        min-height: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 230px 1fr;
+    }
+
+    .babysitter-card-photo {
+        min-height: 230px;
+        height: 230px;
+    }
+
+    .babysitter-card-content {
+        padding: 18px 20px 20px;
+    }
+
+    /* Typo remontée d'un cran : les cartes sont plus grandes */
+    .babysitter-card-header h3 {
+        font-size: 22px;
+    }
+
+    .babysitter-verified {
+        font-size: 10px;
+    }
+
+    .babysitter-verified i {
+        font-size: 11px;
+    }
+
+    .babysitter-rating {
+        font-size: 11px;
+        padding: 6px 9px;
+    }
+
+    .babysitter-rating i {
+        font-size: 11px;
+    }
+
+    .babysitter-card-info {
+        margin-top: 14px;
+        gap: 7px;
+    }
+
+    .babysitter-card-info span {
+        font-size: 11px;
+    }
+
+    .babysitter-card-info i {
+        width: 14px;
+        font-size: 11px;
+    }
+
+    .babysitter-card-description {
+        margin: 14px 0 12px;
+        font-size: 12px;
+        line-height: 1.55;
+    }
+
+    .babysitter-skills span {
+        padding: 6px 9px;
+        font-size: 10px;
+    }
+
+    .babysitter-card-footer {
+        padding-top: 12px;
+    }
+
+    .babysitter-price strong {
+        font-size: 20px;
+    }
+
+    .babysitter-price span {
+        font-size: 10px;
+    }
+
+    .babysitter-availability-text {
+        font-size: 10px;
+    }
+
+    .babysitter-card-actions {
+        margin-top: 12px;
+        gap: 10px;
+    }
+
+    .babysitter-phone {
+        width: 42px;
+        min-height: 42px;
+    }
+
+    .babysitter-profile-button {
+        min-height: 42px;
+        font-size: 11px;
+        transition: background-color var(--transition);
+    }
+
+    .babysitter-profile-button:hover {
+        background-color: var(--primary-dark);
+    }
+
+    .babysitter-availability {
+        font-size: 10px;
+        padding: 7px 10px;
+    }
+}
+
+
+/* ============================================================
+   DESKTOP — MIN-WIDTH: 1024px
+   Grille 3 colonnes
+   ============================================================ */
+
+@media (min-width: 1024px) {
+
+    .babysitters-list-section {
+        max-width: 1280px;
+        padding: 8px 56px 56px;
+    }
+
+    .babysitters-carousel-track {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+    }
+
+    .babysitters-carousel-track .babysitter-card {
+        grid-template-rows: 260px 1fr;
+    }
+
+    .babysitter-card-photo {
+        min-height: 260px;
+        height: 260px;
+    }
+
+    .babysitter-card-content {
+        padding: 20px 22px 22px;
+    }
+
+    .babysitter-card-header h3 {
+        font-size: 24px;
+    }
+
+    .babysitter-card-description {
+        font-size: 13px;
+    }
+
+    .babysitter-skills span {
+        font-size: 10.5px;
+    }
+
+    .babysitter-price strong {
+        font-size: 22px;
+    }
+
+    .babysitter-profile-button {
+        font-size: 12px;
+        min-height: 44px;
+    }
+
+    .babysitter-phone {
+        width: 44px;
+        min-height: 44px;
+    }
+}
+
+/* ============================================================
+   BABY-SITTERS — TABLETTE (≥ 768px)
+   ============================================================ */
+
+@media (min-width: 768px) {
+
+    /* ---------- INTRO ---------- */
+    .babysitters-intro {
+        padding: 44px 32px 32px;
+    }
+
+    .babysitters-intro-content {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .babysitters-location {
+        margin-bottom: 22px;
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+
+    .babysitters-location i {
+        font-size: 15px;
+    }
+
+    .babysitters-intro h1 {
+        max-width: 100%;
+        font-size: 46px;
+        line-height: 1.1;
+    }
+
+    .babysitters-intro p {
+        max-width: 500px;
+        margin: 16px auto 0;
+        font-size: 15px;
+    }
+
+    /* ---------- RECHERCHE : 3 colonnes ---------- */
+    .babysitters-search-section {
+        padding: 8px 32px 30px;
+    }
+
+    .babysitters-search-card {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 18px;
+        display: grid;
+        grid-template-columns: 1.6fr 1fr auto;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .babysitters-search-field,
+    .babysitters-location-field {
+        height: 52px;
+        margin-bottom: 0;
+    }
+
+    .babysitters-search-field input,
+    .babysitters-location-field select {
+        font-size: 13px;
+    }
+
+    .babysitters-search-button {
+        width: auto;
+        min-height: 52px;
+        padding: 0 28px;
+        font-size: 13px;
+    }
+
+    /* ---------- TOOLBAR : une seule ligne ---------- */
+    .babysitters-results-toolbar {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 8px 32px 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .babysitters-results-count {
+        margin-bottom: 0;
+        font-size: 13px;
+    }
+
+    .babysitters-results-count strong {
+        font-size: 20px;
+    }
+
+    .babysitters-results-actions {
+        gap: 10px;
+    }
+
+    .babysitters-filter-button,
+    .babysitters-sort-button {
+        flex: 0 0 auto;
+        padding: 0 18px;
+        font-size: 12px;
+    }
+
+    /* ---------- LISTE : carrousel → grille 2 colonnes ---------- */
+    .babysitters-list-section {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 8px 40px 40px;
+    }
+
+    .babysitters-carousel {
+        display: block;
+        position: static;
+    }
+
+    .babysitters-carousel-viewport {
+        overflow: visible;
+    }
+
+    .babysitters-carousel-track {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+        width: 100%;
+        transform: none !important;
+        transition: none;
+    }
+
+    .babysitters-carousel-arrow,
+    .babysitters-carousel-dots {
+        display: none;
+    }
+
+    /* ---------- CARDS : passage en vertical ---------- */
+    .babysitters-carousel-track .babysitter-card {
+        flex: unset;
+        width: 100%;
+        min-height: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 230px 1fr;
+    }
+
+    .babysitter-card-photo {
+        min-height: 230px;
+        height: 230px;
+    }
+
+    .babysitter-card-content {
+        padding: 18px 20px 20px;
+    }
+
+    .babysitter-card-header h3 { font-size: 22px; }
+    .babysitter-verified { font-size: 10px; }
+    .babysitter-verified i { font-size: 11px; }
+    .babysitter-rating { font-size: 11px; padding: 6px 9px; }
+    .babysitter-rating i { font-size: 11px; }
+
+    .babysitter-card-info { margin-top: 14px; gap: 7px; }
+    .babysitter-card-info span { font-size: 11px; }
+    .babysitter-card-info i { width: 14px; font-size: 11px; }
+
+    .babysitter-card-description {
+        margin: 14px 0 12px;
+        font-size: 12px;
+        line-height: 1.55;
+    }
+
+    .babysitter-skills span { padding: 6px 9px; font-size: 10px; }
+    .babysitter-card-footer { padding-top: 12px; }
+    .babysitter-price strong { font-size: 20px; }
+    .babysitter-price span { font-size: 10px; }
+    .babysitter-availability-text { font-size: 10px; }
+    .babysitter-card-actions { margin-top: 12px; gap: 10px; }
+    .babysitter-phone { width: 42px; min-height: 42px; }
+
+    .babysitter-profile-button {
+        min-height: 42px;
+        font-size: 11px;
+        transition: background-color var(--transition);
+    }
+
+    .babysitter-profile-button:hover {
+        background-color: var(--primary-dark);
+    }
+
+    .babysitter-availability {
+        font-size: 10px;
+        padding: 7px 10px;
+    }
+
+    /* ---------- DEVENIR BABY-SITTER ---------- */
+    .babysitter-section {
+        padding: 30px 32px;
+    }
+
+    .babysitter-container {
+        max-width: 900px;
+        min-height: 280px;
+    }
+
+    .babysitter-content {
+        width: 55%;
+        padding: 36px 0 36px 40px;
+    }
+
+    .babysitter-title { font-size: 22px; }
+
+    .babysitter-content h2 {
+        font-size: 34px;
+        margin-bottom: 14px;
+    }
+
+    .babysitter-description {
+        max-width: 320px;
+        margin-bottom: 22px;
+        font-size: 13px;
+    }
+
+    .babysitter-btn {
+        min-height: 46px;
+        padding: 0 22px;
+        font-size: 12px;
+    }
+
+    .babysitter-btn i { font-size: 14px; }
+}
+
+
+/* ============================================================
+   BABY-SITTERS — DESKTOP (≥ 1024px)
+   ============================================================ */
+
+@media (min-width: 1024px) {
+
+    /* ---------- INTRO ---------- */
+    .babysitters-intro {
+        padding: 64px 48px 44px;
+    }
+
+    .babysitters-intro h1 {
+        font-size: 58px;
+        line-height: 1.05;
+    }
+
+    .babysitters-intro p {
+        max-width: 560px;
+        font-size: 17px;
+    }
+
+    .babysitters-location {
+        margin-bottom: 26px;
+        padding: 11px 20px;
+        font-size: 13px;
+    }
+
+    /* ---------- RECHERCHE ---------- */
+    .babysitters-search-card {
+        max-width: 1000px;
+        padding: 22px;
+        gap: 14px;
+    }
+
+    .babysitters-search-field,
+    .babysitters-location-field {
+        height: 58px;
+    }
+
+    .babysitters-search-field > i,
+    .babysitters-location-field > i:first-child {
+        font-size: 17px;
+        margin-left: 16px;
+    }
+
+    .babysitters-search-field input,
+    .babysitters-location-field select {
+        font-size: 14.5px;
+        padding-left: 14px;
+    }
+
+    .babysitters-search-button {
+        min-height: 58px;
+        padding: 0 38px;
+        font-size: 14.5px;
+        transition: background-color var(--transition), transform var(--transition);
+    }
+
+    .babysitters-search-button:hover {
+        transform: translateY(-1px);
+    }
+
+    /* ---------- TOOLBAR ---------- */
+    .babysitters-results-toolbar {
+        max-width: 1200px;
+        padding: 12px 48px 26px;
+    }
+
+    .babysitters-results-count strong { font-size: 22px; }
+
+    .babysitters-filter-button,
+    .babysitters-sort-button {
+        min-height: 46px;
+        padding: 0 22px;
+        font-size: 13px;
+        transition: border-color var(--transition), color var(--transition);
+    }
+
+    .babysitters-filter-button:hover,
+    .babysitters-sort-button:hover {
+        border-color: var(--primary);
+    }
+
+    /* ---------- LISTE : grille 3 colonnes ---------- */
+    .babysitters-list-section {
+        max-width: 1280px;
+        padding: 8px 56px 56px;
+    }
+
+    .babysitters-carousel-track {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+    }
+
+    .babysitters-carousel-track .babysitter-card {
+        grid-template-rows: 260px 1fr;
+    }
+
+    .babysitter-card-photo {
+        min-height: 260px;
+        height: 260px;
+    }
+
+    .babysitter-card-content {
+        padding: 20px 22px 22px;
+    }
+
+    .babysitter-card-header h3 { font-size: 24px; }
+    .babysitter-card-description { font-size: 13px; }
+    .babysitter-skills span { font-size: 10.5px; }
+    .babysitter-price strong { font-size: 22px; }
+
+    .babysitter-profile-button {
+        font-size: 12px;
+        min-height: 44px;
+    }
+
+    .babysitter-phone {
+        width: 44px;
+        min-height: 44px;
+    }
+
+    /* ---------- DEVENIR BABY-SITTER ---------- */
+    .babysitter-section {
+        padding: 40px 48px 64px;
+    }
+
+    .babysitter-container {
+        max-width: 1200px;
+        min-height: 360px;
+        background-position: right center;
+    }
+
+    .babysitter-content {
+        width: 50%;
+        padding: 56px 0 56px 56px;
+    }
+
+    .babysitter-title { font-size: 26px; }
+
+    .babysitter-content h2 {
+        font-size: 44px;
+        line-height: 1.12;
+        margin-bottom: 18px;
+    }
+
+    .babysitter-description {
+        max-width: 380px;
+        margin-bottom: 28px;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .babysitter-btn {
+        min-height: 54px;
+        padding: 0 28px;
+        font-size: 14px;
+        transition: background-color var(--transition), transform var(--transition);
+    }
+
+    .babysitter-btn:hover {
+        background-color: #4a3527;
+        transform: translateY(-1px);
+    }
+
+    .babysitter-btn i { font-size: 16px; }
+}

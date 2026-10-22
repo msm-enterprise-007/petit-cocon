@@ -338,49 +338,33 @@
 
     </section>
 
-    <!-- ==========================================
-         FORMULAIRE DE CONNEXION
-    ========================================== -->
+<section class="connexion-form-section" aria-labelledby="connexion-form-title">
     
-    <section class="connexion-form-section" aria-labelledby="connexion-form-title">
-    
+    <!-- LE NOUVEAU WRAPPER QUI GÈRE LE CÔTÉ CÔTE SUR DESKTOP -->
+    <div class="connexion-form-wrapper">
+
+        <!-- ==========================================
+             COLONNE GAUCHE : TON FORMULAIRE EXISTANT
+             ========================================== -->
         <div class="connexion-form-card">
     
             <div class="connexion-form-heading">
-    
-                <h2 id="connexion-form-title">
-                    Bienvenue !
-                </h2>
-    
+                <h2 id="connexion-form-title">Bienvenue !</h2>
                 <div class="connexion-heading-decoration" aria-hidden="true">
                     <span></span>
                     <i class="fa-solid fa-heart"></i>
                     <span></span>
                 </div>
-    
-                <p>
-                    Entrez vos identifiants pour vous connecter à votre compte.
-                </p>
-    
+                <p>Entrez vos identifiants pour vous connecter à votre compte.</p>
             </div>
-    
     
             <form class="connexion-form" action="#" method="post">
     
                 <!-- Adresse e-mail -->
                 <div class="connexion-field">
-    
-                    <label for="connexion-email">
-                        Adresse e-mail
-                    </label>
-    
+                    <label for="connexion-email">Adresse e-mail</label>
                     <div class="connexion-input-wrapper">
-    
-                        <i
-                            class="fa-regular fa-envelope"
-                            aria-hidden="true"
-                        ></i>
-    
+                        <i class="fa-regular fa-envelope" aria-hidden="true"></i>
                         <input
                             type="email"
                             id="connexion-email"
@@ -389,26 +373,14 @@
                             autocomplete="email"
                             required
                         >
-    
                     </div>
-    
                 </div>
-    
     
                 <!-- Mot de passe -->
                 <div class="connexion-field">
-    
-                    <label for="connexion-password">
-                        Mot de passe
-                    </label>
-    
+                    <label for="connexion-password">Mot de passe</label>
                     <div class="connexion-input-wrapper">
-    
-                        <i
-                            class="fa-solid fa-lock"
-                            aria-hidden="true"
-                        ></i>
-    
+                        <i class="fa-solid fa-lock" aria-hidden="true"></i>
                         <input
                             type="password"
                             id="connexion-password"
@@ -417,111 +389,98 @@
                             autocomplete="current-password"
                             required
                         >
-    
                         <button
                             type="button"
                             class="password-toggle"
                             aria-label="Afficher le mot de passe"
                             aria-controls="connexion-password"
                         >
-                            <i
-                                class="fa-regular fa-eye"
-                                aria-hidden="true"
-                            ></i>
+                            <i class="fa-regular fa-eye" aria-hidden="true"></i>
                         </button>
-    
                     </div>
-    
                 </div>
-    
     
                 <!-- Options -->
                 <div class="connexion-options">
-    
                     <label class="remember-me">
-    
-                        <input
-                            type="checkbox"
-                            name="remember"
-                        >
-    
+                        <input type="checkbox" name="remember">
                         <span>Se souvenir de moi</span>
-    
                     </label>
-    
-                    <a href="#">
-                        Mot de passe oublié ?
-                    </a>
-    
+                    <a href="#">Mot de passe oublié ?</a>
                 </div>
-    
     
                 <!-- Connexion -->
-                <button
-                    type="submit"
-                    class="connexion-submit"
-                >
-    
-                    <i
-                        class="fa-regular fa-user"
-                        aria-hidden="true"
-                    ></i>
-    
+                <button type="submit" class="connexion-submit">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
                     <span>Se connecter</span>
-    
                 </button>
     
-    
                 <!-- Connexion sociale -->
-                <p class="connexion-social-title">
-                    Ou continuer avec
-                </p>
-    
+                <p class="connexion-social-title">Ou continuer avec</p>
                 <div class="connexion-socials">
-    
-                    <button
-                        type="button"
-                        class="connexion-social-btn"
-                    >
-                        <i
-                            class="fa-brands fa-google"
-                            aria-hidden="true"
-                        ></i>
-    
+                    <button type="button" class="connexion-social-btn">
+                        <i class="fa-brands fa-google" aria-hidden="true"></i>
                         <span>Continuer avec Google</span>
                     </button>
-    
-                    <button
-                        type="button"
-                        class="connexion-social-btn"
-                    >
-                        <i
-                            class="fa-brands fa-apple"
-                            aria-hidden="true"
-                        ></i>
-    
+                    <button type="button" class="connexion-social-btn">
+                        <i class="fa-brands fa-apple" aria-hidden="true"></i>
                         <span>Continuer avec Apple</span>
                     </button>
-    
                 </div>
-    
     
                 <!-- Inscription -->
                 <p class="connexion-register">
-    
-                    Vous n'avez pas de compte ?
-    
-                    <a href="inscription-parent.html">
-                        S'inscrire
-                    </a>
-    
+                    Vous n'avez pas de compte ? <a href="inscription-parent.html">S'inscrire</a>
                 </p>
     
             </form>
-    
         </div>
-    
-    </section>
+
+        <!-- ==========================================
+             COLONNE DROITE : LES ARGUMENTS (DESKTOP)
+             ========================================== -->
+        <div class="connexion-benefits-card">
+            <h2 class="benefits-title">
+                Avec Petit Cocon,<br>
+                <span>vous êtes entre<br>de bonnes mains.</span>
+            </h2>
+            
+            <span class="benefits-decoration"></span>
+
+            <ul class="benefits-list">
+                <li>
+                    <div class="benefit-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="benefit-text">
+                        <h3>Plateforme sécurisée</h3>
+                        <p>Vos données sont protégées et confidentielles.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon"><i class="fa-solid fa-user-check"></i></div>
+                    <div class="benefit-text">
+                        <h3>Communauté de confiance</h3>
+                        <p>Des parents et baby-sitters vérifiés et bienveillants.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon"><i class="fa-regular fa-star"></i></div>
+                    <div class="benefit-text">
+                        <h3>Accompagnement dédié</h3>
+                        <p>Notre équipe est là pour vous accompagner à chaque étape.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon"><i class="fa-regular fa-heart"></i></div>
+                    <div class="benefit-text">
+                        <h3>Sérénité au quotidien</h3>
+                        <p>Trouvez la garde idéale en toute tranquillité.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
 
         <!-- ==========================================
          BESOIN D'AIDE
